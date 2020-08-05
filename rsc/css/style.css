@@ -155,11 +155,16 @@
     width: 96px;
     height: 110px;
     padding: 26px;
-    background: #00adee;
+    background: #00479b;
     cursor: pointer;
     box-sizing: border-box;
     border: none;
     outline: none;
+    transition: .3s;
+}
+
+.admin__header .btn_nav.toggle {
+    background: #00adee;
 }
 
 .admin__header .btn_nav span {
@@ -453,11 +458,13 @@
 }
 
 .admin__login-detail a.setting-btn {
-    background: #ffa000;
+    /* background: #ffa000; */
+    background-image: linear-gradient(to right, #F09819 0%, #EDDE5D 51%, #F09819 100%);
 }
 
 .admin__login-detail a.logout-btn {
-    background: #00adee;
+    /* background: #00adee; */
+    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%);
 }
 
 
@@ -534,13 +541,16 @@
 .admin__section-comment .pause-btn {
     position: absolute;
     display: block;
-    top: 0;
+    top: -8px;
     right: 0;
-    background-color: #00adee;
+    /* background-color: #00adee; */
     color: #fff;
     font-weight: 600;
-    padding: 2px 5px;
-    border-radius: 2px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    /* border: 1px solid #007cab; */
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%)
 }
 
 
@@ -648,18 +658,32 @@
 
 .admin__table {
     width: 100%;
+    margin-top: 12px;
 }
 
 .admin__table th {
+    position: relative;
     text-align: center;
-    font-weight: 500;
-    padding: 27px 0 26px;
     vertical-align: middle;
+    padding: 22px 0 21px;
+    font-weight: 500;
+    border: 1px solid #cbcbcb;
+    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+    box-sizing: border-box;
+    background: #f9f9f9;
+}
+
+.admin__table tbody tr:last-child td {
+    border-bottom: 1px solid #cbcbcb;
 }
 
 .admin__table td {
+    position: relative;
     text-align: center;
-    padding: 18px 0;
+    vertical-align: middle;
+    padding: 16px 0;
+    border: 1px solid #eaeaea;
 }
 
 .admin__table td.server_name,
@@ -667,22 +691,10 @@
     color: #3f51b5;
 }
 
-.admin__table tbody tr:last-child td {
-    padding: 18px 0 0 0;
-}
-
 .admin__table th .input, 
 .admin__table td .input {
-    position: relative;
     display: block;
     height: 16px;
-}
-
-.admin__table th .input input,
-.admin__table td .input input {
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .admin__table th .input input:checked + label,
@@ -693,8 +705,9 @@
 .admin__table th .input label,
 .admin__table td .input label {
     position: absolute;
-    top: 1px;
-    left: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 	width: 20px;
 	height: 20px;
 	background: url('../img/sprite.png');	
@@ -795,7 +808,7 @@
 .admin__subscription .admin__update-info,
 .admin__server-monitor .admin__update-info {
     color: #333;
-    padding: 0px 82px 0 0;
+    padding: 0px 94px 0 0;
 }
 
 .admin__connection-data .admin__update-info .pause-btn,
@@ -804,13 +817,16 @@
 .admin__server-monitor .admin__update-info .pause-btn {
     position: absolute;
     display: block;
-    top: -3px;
+    top: -8px;
     right: 0;
-    background-color: #00adee;
+    /* background-color: #00adee; */
     color: #fff;
     font-weight: 500;
-    padding: 2px 5px;
+    padding: 7px 10px;
     border-radius: 2px;
+    /* border: 1px solid #007cab; */
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%)
 }
 
 .admin__search-wrap {
@@ -818,6 +834,7 @@
     margin: 20px 0;
 }
 
+.admin__connection-data .admin__search-wrap,
 .admin__disconnected .admin__search-wrap,
 .admin__subscription .admin__search-wrap {
     text-align: left;
@@ -826,7 +843,7 @@
 .admin__search-wrap select {
     width: 360px;
     height: 30px;
-    border: 1px solid #eaeaea;
+    border: 1px solid #ccc;
     text-indent: 20px;
     box-sizing: border-box;
     line-height: 30px;
@@ -838,7 +855,7 @@
 .admin__search-wrap input {
     width: 210px;
     height: 30px;
-    border: 1px solid #eaeaea;
+    border: 1px solid #ccc;
     box-sizing: border-box;
     outline: 0;
     text-indent: 20px;
@@ -860,20 +877,27 @@
 
 .admin__search-wrap .search-btn {
     background: #ccc;
+    border: 1px solid #666;
 }
 
 .admin__search-wrap .delete-btn {
     position: absolute;
     right: 40px;
-    background: #ffa000;
     color: #fff;
+    cursor: pointer;
+    /* border: 1px solid #d18300; */
+    /* background: #ffa000; */
+    background-image: linear-gradient(to right, #F09819 0%, #EDDE5D 51%, #F09819 100%);
 }
 .admin__search-wrap .add-btn {
     position: absolute;
     right: 130px;
-    background: #00adee;
+    /* background: #00adee; */
     color: #fff;
     cursor: pointer;
+    /* border: 1px solid #007cab; */
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%)
 }
 
 .admin__table-paging-wrap {
@@ -904,33 +928,21 @@
     padding: 13px 0;
 }
 
-.admin__subscription .admin__table thead tr:first-child th, 
+/* .admin__subscription .admin__table thead tr:first-child th, 
 .admin__subscription .admin__table thead tr:nth-child(2) th:first-child,
 .admin__subscription .admin__table thead tr:nth-child(2) th:nth-child(4),
 .admin__subscription .admin__table thead tr:nth-child(2) th:nth-child(7),
 .admin__subscription .admin__table tbody td:nth-child(3),
 .admin__subscription .admin__table tbody td:nth-child(6),
 .admin__subscription .admin__table tbody td:nth-child(9) {
-    border-left: 1px solid #d9dfe9;
-}
-
-.admin__subscription .admin__table thead tr:first-child th:first-child,
-.admin__subscription .admin__table thead tr:first-child th:nth-child(2){
-    border: 0;
-}
-
-.admin__subscription .admin__table thead tr th:nth-child(2),
-.admin__subscription .admin__table tbody tr td:nth-child(2){
-    border: none;
-    vertical-align: middle;
-}
+    border-left: 1px solid red;
+} */
 
 .admin__subscription .admin__table thead tr:nth-child(2) th {
     background: #f9f9f9;
     padding: 5px 0;
     vertical-align: middle;
     font-size: 12px;
-    border-bottom: 1px solid #f2f2f2;
 }
 
 .admin__subscription .admin__table thead tr:nth-child(2) th:nth-child(2) {
@@ -1025,12 +1037,12 @@
     background: #fff;
 }
 .modal-header {
-    background: #f9f9f9;
+    background: #ddd;
     color: #282828;
     font-weight: 600;
     padding: 16px 0 16px 30px;
     border-bottom: 1px solid #f2f2f2;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
 }
 .modal-explan {
     padding: 24px 57px;
@@ -1054,7 +1066,7 @@
 .modal-contents input {
     width: 584px;
     height: 30px;
-    border: 1px solid #eaeaea;
+    border: 1px solid #ccc;
     border-radius: 3px;
     vertical-align: middle;
     text-indent: 20px;
@@ -1071,20 +1083,22 @@
 .save-btn {
     width: 127px;
     height: 30px;
-    background: #00adee;
+    /* background: #00adee; */
     border-radius: 3px;
     box-sizing: border-box;
     color: #fff;
     outline: 0;
     border: 0;
     cursor: pointer;
+    /* border: 1px solid #007cab; */
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%)
 }
 
 .close-btn {
     display: inline-block;
     width: 127px;
     height: 30px;
-    background: #ffa000;
     border-radius: 3px;
     box-sizing: border-box;
     color: #fff;
@@ -1093,6 +1107,9 @@
     line-height: 30px;
     letter-spacing: 0;
     font-size: 14px;
+    /* border: 1px solid #d18300; */
+    /* background: #ffa000; */
+    background-image: linear-gradient(to right, #F09819 0%, #EDDE5D 51%, #F09819 100%);    
 }
 
 
