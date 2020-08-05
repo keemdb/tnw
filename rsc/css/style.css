@@ -941,6 +941,33 @@
     margin: 0 30px 0 0;
 }
 
+.admin__server-checklist .admin__table .server_color {
+    display: inline-block;
+    width: 120px;
+    height: 20px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.server_color.sc1{background: #f00;}
+.server_color.sc2{background: #1f497d;}
+.server_color.sc3{background: #e46c0a;}
+.server_color.sc4{background: #ff66cc;}
+.server_color.sc5{background: #00b050;}
+.server_color.sc6{background: #ffd44b}
+.server_color.sc7{background: #953735;}
+.server_color.sc8{background: #8064a2;}
+.server_color.sc9{background: #4f81bd;}
+.server_color.sc10{background: #9bbb59;}
+.server_color.sc11{background: #7f7f7f;}
+.server_color.sc12{background: #948a54;}
+.server_color.sc13{background: #f79646;}
+.server_color.sc14{background: #558ed5;}
+.server_color.sc15{background: #17375e;}
+.server_color.sc16{background: #ff0dae;}
+.server_color.sc17{background: #006c31;}
+
 /* Modal Popup */
 .modal-wrap {
     position: fixed;
