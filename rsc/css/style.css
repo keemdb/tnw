@@ -950,6 +950,42 @@
     vertical-align: middle;
 }
 
+.admin__server-monitor .admin__search-wrap {
+    text-align: left;
+    font-weight: 500;
+}
+
+.admin__server-monitor .admin__search-wrap .server-use-date {
+    width: 190px;
+    margin-right: 26px;
+}
+.admin__server-monitor .admin__search-wrap .server-use-hr,
+.admin__server-monitor .admin__search-wrap .server-use-min {
+    width: 90px;
+}
+.admin__server-monitor .admin__search-wrap .server-use-hr {
+    margin-right: 26px;    
+}
+
+.admin__server-chart-wrap div {
+    font-weight: 600;
+    height: 257px;
+    margin-bottom: 100px;
+}
+
+.admin__server-chart-wrap .cpu-chart {
+    color: #195fe6;
+    height: 257px;
+    margin-bottom: 100px;
+}
+.admin__server-chart-wrap .memory-chart {
+    color: #63c8cd;
+}
+.admin__server-chart-wrap .disk-chart {
+    color: #ff9f00;
+}
+
+
 .server_color.sc1{background: #f00;}
 .server_color.sc2{background: #1f497d;}
 .server_color.sc3{background: #e46c0a;}
