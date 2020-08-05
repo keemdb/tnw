@@ -785,20 +785,23 @@
 
 .admin__connection-data,
 .admin__disconnected,
-.admin__subscription {
+.admin__subscription,
+.admin__server-monitor {
     position: relative;
 }
 
 .admin__connection-data .admin__update-info,
 .admin__disconnected .admin__update-info,
-.admin__subscription .admin__update-info {
+.admin__subscription .admin__update-info,
+.admin__server-monitor .admin__update-info {
     color: #333;
     padding: 0px 82px 0 0;
 }
 
 .admin__connection-data .admin__update-info .pause-btn,
 .admin__disconnected .admin__update-info .pause-btn,
-.admin__subscription .admin__update-info .pause-btn {
+.admin__subscription .admin__update-info .pause-btn,
+.admin__server-monitor .admin__update-info .pause-btn {
     position: absolute;
     display: block;
     top: -3px;
@@ -932,6 +935,10 @@
 
 .admin__subscription .admin__table thead tr:nth-child(2) th:nth-child(2) {
     border-left: 1px solid #f2f2f2;
+}
+
+.admin__server-monitor-wrap {
+    margin: 0 30px 0 0;
 }
 
 /* Modal Popup */

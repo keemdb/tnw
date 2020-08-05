@@ -86,6 +86,7 @@ a {text-decoration:none}
 }
 
 .fl {float: left;}
+.fr {float: right;}
 input[type="radio"],input[type="checkbox"] {opacity:0;filter:alpha(opacity=0)}
 
 .admin__table-paging {text-align: center; font-size: 0;}
