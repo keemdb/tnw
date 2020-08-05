@@ -1,0 +1,79 @@
+.logo-small {
+	background: url('../img/sprite.png');	
+	background-position: -238px 0;
+	width: 80px;
+	height: 45px;
+}
+
+.ico-home {
+	background: url('../img/sprite.png');	
+	background-position: -328px 0;
+	width: 23px;
+	height: 23px;
+}
+
+.ico-monitoring {
+	background: url('../img/sprite.png');	
+	background-position: 0 -65px;
+	width: 23px;
+	height: 23px;
+}
+
+.ico-home-bk {
+	background: url('../img/sprite.png');	
+	background-position: -329px -51px;
+	width: 23px;
+	height: 23px;
+}
+.ico-monitoring-bk {
+	background: url('../img/sprite.png');	
+	background-position: -362px -50px;
+	width: 23px;
+	height: 23px;
+}
+.ico-messaging-bk {
+	background: url('../img/sprite.png');	
+	background-position: -328px -76px;
+	width: 23px;
+	height: 21px;
+}
+.ico-server-bk {
+	background: url('../img/sprite.png');	
+    background-position: -361px -77px;
+    width: 23px;
+    height: 25px;
+}
+.ico-webui-bk {
+	background: url('../img/sprite.png');	
+	background-position: -329px -109px;
+	width: 24px;
+	height: 23px;
+}
+
+.ico-refresh {
+	background: url('../img/sprite.png');	
+	background-position: -361px -1px;
+	width: 29px;
+	height: 26px;
+}
+
+.ico-uncheck {
+	background: url('../img/sprite.png');	
+	background-position: -400px -80px;
+	width: 20px;
+	height: 20px;
+}
+
+.ico-more {
+	background: url('../img/sprite.png');	
+	background-position: -330px -37px;
+	width: 22px;
+	height: 7px;
+}
+
+.ico-arrow-wh-r {
+	background: url('../img/sprite.png');	
+	background-position: -501px -145px;
+	width: 7px;
+	height: 11px;
+}

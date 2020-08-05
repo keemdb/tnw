@@ -1,0 +1,112 @@
+@font-face {
+	font-family: 'IBM Plex Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	src: local("IBM Plex Sans KR Bold"), local("IBMPlexSansKR-Bold"), url("../font/IBMPlexSansKR-Bold.woff2") format("woff2"), url("../font/IBMPlexSansKR-Bold.woff") format("woff"); }
+
+@font-face {
+	font-family: 'IBM Plex Sans KR';
+	font-style: normal;
+	font-weight: 300;
+	src: local("IBM Plex Sans KR Light"), local("IBMPlexSansKR-Light"), url("../font/IBMPlexSansKR-Light.woff2") format("woff2"), url("../font/IBMPlexSansKR-Light.woff") format("woff"); }
+
+
+@font-face {
+	font-family: 'IBM Plex Sans KR';
+	font-style: normal;
+	font-weight: 500;
+	src: local("IBM Plex Sans KR Medium"), local("IBMPlexSansKR-Medium"), url("../font/IBMPlexSansKR-Medium.woff2") format("woff2"), url("../font/IBMPlexSansKR-Medium.woff") format("woff"); }
+
+@font-face {
+	font-family: 'IBM Plex Sans KR';
+	font-style: normal;
+	font-weight: 400;
+	src: local("IBM Plex Sans KR"), local("IBMPlexSansKR"), url("../font/IBMPlexSansKR-Regular.woff2") format("woff2"), url("../font/IBMPlexSansKR-Regular.woff") format("woff"); }
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    font-family:'IBM Plex Sans KR';
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html, body {
+	line-height: 1;
+	background-color: #edf0f5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+hr {display:none}
+a {text-decoration:none}
+
+.hide {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.fl {float: left;}
+input[type="radio"],input[type="checkbox"] {opacity:0;filter:alpha(opacity=0)}
+
+.admin__table-paging {text-align: center; font-size: 0;}
+.admin__table-paging li {display: inline-block; vertical-align: middle;}
+.admin__table-paging li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    color: #333;
+    line-height: 30px;
+}
+.admin__table-paging li.on a,
+.admin__table-paging li a:hover {
+    color: #ff5a20;
+    text-decoration: underline;
+}
+.admin__table-paging li.prev a,
+.admin__table-paging li.next a {overflow: hidden;width: 30px;height: 30px;color: transparent;}
+.admin__table-paging li.prev a {background: url(../img/sprite.png);background-position: -358px -135px; margin-right: 22px;}
+.admin__table-paging li.next a {background: url(../img/sprite.png);background-position: -393px -135px; margin-left: 22px;}
+
+.mg40 {margin: 0 40px;}
+.marginbottom10 {margin-bottom: 10px;}
+.txt_lf {text-align: left;}

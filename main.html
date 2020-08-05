@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TNW Management Instrumentation</title>
+    <link rel="stylesheet" href="./rsc/css/style.css">
+    <script src="./rsc/js/jquery.min.js"></script>
+</head>
+
+<body class="main">
+    <!-- Header -->
+    <div class="admin__warp admin__warp--header">
+        <header class="admin__header">
+            <button class="btn_nav">
+                <span></span>
+            </button>
+
+            <h1 class="admin__logo"><a href="#"><img src="./rsc/img/logo.png" alt="TNW ManagementInstrumentation">TNW
+                    ManagementInstrumentation</a>
+            </h1>
+            <ul class="admin__gnb-list">
+                <li class="admin__gnb-item on"><span class="ico-home"></span><a href="./main.html">Home</a></li>
+            </ul>
+            <div class="admin__update-info">
+                <div class="admin__update-detail">
+                    <span>LAST UPDATE</span>
+                    <em class="admin__update-date">2020.07.24 17:30:45</em>
+                    <em class="admin__update-time">17:30:45</em>
+                </div>
+                <a href="#" class="refresh-btn ico-refresh">Logout</a>
+            </div>
+        </header>
+    </div>
+    <!-- //Header -->
+
+    <!-- Side Navigation -->
+    <div class="admin__snb-wrap">
+        <div class="admin__login-info">
+            <div class="admin__login-user fl">
+                <img src="./rsc/img/user_01.jpg" alt="">
+            </div>
+            <div class="admin__login-detail fl">
+                <span>Hi</span>
+                <div><span class="admin__login-name">관리자(admin)</span>님</div>
+                <a href="#" class="setting-btn">Setting</a>
+                <a href="#" class="logout-btn">Log-out</a>
+            </div>
+        </div>
+        <ul class="admin__snb">
+            <li><a href="#"><span class="ico-home-bk"></span>HOME</a></li>
+            <li class=""><a href="#"><span class="ico-monitoring-bk"></span>Monitoring</a>
+                <ul>
+                    <li><a href="./monitoring/connection.html">Connection Monitor</a></li>
+                    <li><a href="./monitoring/disconnected.html">Disconnected Device ID Monitor</a></li>
+                    <li><a href="./monitoring/publish.html">Publish Monitor</a></li>
+                    <li><a href="#">Subscription Monitor</a></li>
+                    <li><a href="#">Server Monitor</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="ico-messaging-bk"></span>Messaging</a>
+                <ul>
+                    <li><a href="#">TNW Server</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="ico-server-bk"></span>Server</a>
+                <ul>
+                    <li><a href="#">User ID Management</a></li>
+                    <li><a href="#">Server Control</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="ico-webui-bk"></span>Web UI Management</a>
+                <ul>
+                    <li><a href="#">Web UI Users</a></li>
+                    <li><a href="#">Web UI Settings</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="admin__snb-background"></div>
+    <!-- //Side Navigation -->
+
+    <!-- Contents -->
+    <div class="admin__wrap admin__wrap--contents">
+        <article class="admin__contents">
+            <h1 class="hide">Dashboard</h1>
+            <div class="admin__section-wrap">
+                <section class="admin__section fl admin__message-gateway">
+                    <h1 class="admin__section-title mg40">MESSAGE GATEWAY<br>SERVER CONNECTION</h1>
+                    <ul class="admin__message-gateway-list">
+                        <li class="admin__message-gateway-item">
+                            <div class="admin__item-detail mg40">
+                                <em>1,750</em>
+                                <span>Total Count</span>
+                            </div>
+                            <div class="admin__item-title">
+                                <span>TOTAL</span>
+                            </div>
+                        </li>
+                        <li class="admin__message-gateway-item">
+                            <div class="admin__item-detail mg40">
+                                <em>2,005</em>
+                                <span>Connection Count</span>
+                            </div>
+                            <div class="admin__item-title">
+                                <span>CONNECTION</span>
+                            </div>
+                        </li>
+                        <li class="admin__message-gateway-item">
+                            <div class="admin__item-detail mg40">
+                                <em>355</em>
+                                <span>Disconnected Count</span>
+                            </div>
+                            <div class="admin__item-title">
+                                <span>DISCONNECTION</span>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="admin__section fl admin__quick-stats">
+                    <h1 class="admin__section-title">
+                        QUICK STATS
+                        <a href="#" class="admin__section-more">more</a>
+                    </h1>
+                    <div class="admin__table-wrap">
+                        <table cellpadding="0" cellspacint="0" class="admin__table">
+                            <colgroup>
+                                <col width="30px">
+                                <col width="210px">
+                                <col width="140px">
+                                <col width="150px">
+                                <col width="128px">
+                                <col width="*">
+                                <col width="152px">
+                                <col width="180px">
+                                <col width="182px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">-</th>
+                                    <th scope="col">서버명</th>
+                                    <th scope="col">할당된 연결 수</th>
+                                    <th scope="col">초당 메세지 수</th>
+                                    <th scope="col">서버 가동시간</th>
+                                    <th scope="col">디스크 사용량(%)</th>
+                                    <th scope="col">메모리 사용량(%)</th>
+                                    <th scope="col">유지시킨 메세지 수</th>
+                                    <th scope="col">미 발송 메세지 수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="input">
+                                            <input type="checkbox" name="" id="serverCheck1">
+                                            <label for="serverCheck1"></label>
+                                        </span>
+                                    </td>
+                                    <td class="server_name">Server_1_WAS2</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>5d 21h</td>
+                                    <td>33%</td>
+                                    <td>24%</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="input">
+                                            <input type="checkbox" name="" id="serverCheck2">
+                                            <label for="serverCheck2"></label>
+                                        </span>
+                                    </td>
+                                    <td class="server_name">Server_1_WAS3</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>5d 21h</td>
+                                    <td>33%</td>
+                                    <td>24%</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="input">
+                                            <input type="checkbox" name="" id="serverCheck3">
+                                            <label for="serverCheck3"></label>
+                                        </span>
+                                    </td>
+                                    <td class="server_name">Server_1_WAS4</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>5d 21h</td>
+                                    <td>33%</td>
+                                    <td>24%</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="input">
+                                            <input type="checkbox" name="" id="serverCheck4">
+                                            <label for="serverCheck4"></label>
+                                        </span>
+                                    </td>
+                                    <td class="server_name">Server_1_WAS5</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>5d 21h</td>
+                                    <td>33%</td>
+                                    <td>24%</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="input">
+                                            <input type="checkbox" name="" id="serverCheck5">
+                                            <label for="serverCheck5"></label>
+                                        </span>
+                                    </td>
+                                    <td class="server_name">Server_1_WAS6</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>5d 21h</td>
+                                    <td>33%</td>
+                                    <td>24%</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="input">
+                                            <input type="checkbox" name="" id="serverCheck6">
+                                            <label for="serverCheck6"></label>
+                                        </span>
+                                    </td>
+                                    <td class="server_name">Server_1_WAS7</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>5d 21h</td>
+                                    <td>33%</td>
+                                    <td>24%</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="input">
+                                            <input type="checkbox" name="" id="serverCheck7">
+                                            <label for="serverCheck7"></label>
+                                        </span>
+                                    </td>
+                                    <td class="server_name">Server_1_WAS8</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>5d 21h</td>
+                                    <td>33%</td>
+                                    <td>24%</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="input">
+                                            <input type="checkbox" name="" id="serverCheck7">
+                                            <label for="serverCheck7"></label>
+                                        </span>
+                                    </td>
+                                    <td class="server_name">Server_1_WAS8</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>5d 21h</td>
+                                    <td>33%</td>
+                                    <td>24%</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="input">
+                                            <input type="checkbox" name="" id="serverCheck7">
+                                            <label for="serverCheck7"></label>
+                                        </span>
+                                    </td>
+                                    <td class="server_name">Server_1_WAS8</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>5d 21h</td>
+                                    <td>33%</td>
+                                    <td>24%</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="input">
+                                            <input type="checkbox" name="" id="serverCheck7">
+                                            <label for="serverCheck7"></label>
+                                        </span>
+                                    </td>
+                                    <td class="server_name">Server_1_WAS8</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>5d 21h</td>
+                                    <td>33%</td>
+                                    <td>24%</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            <section class="admin__section">
+                <h1 class="admin__section-title">
+                    QUICK CHART
+                    <a href="#" class="admin__section-more">more</a>
+                </h1>
+                <div class="admin__chart-wrap">
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="chartChk1">
+                            <label for="chartChk1"></label>활성된 메세지 수
+                        </li>
+                        <li>
+                            <input type="checkbox" id="chartChk2">
+                            <label for="chartChk2"></label>초당 메세지 수
+                        </li>
+                        <li>
+                            <input type="checkbox" id="chartChk3">
+                            <label for="chartChk3"></label>메모리 사용량
+                        </li>
+                        <li>
+                            <input type="checkbox" id="chartChk4">
+                            <label for="chartChk4"></label>CPU 사용량
+                        </li>
+                        <li>
+                            <input type="checkbox" id="chartChk5">
+                            <label for="chartChk5"></label>디스크 사용량
+                        </li>
+                        <li>
+                            <input type="checkbox" id="chartChk6">
+                            <label for="chartChk6"></label>유지시킨 메세지 수
+                        </li>
+                        <li>
+                            <input type="checkbox" id="chartChk7">
+                            <label for="chartChk7"></label>미발송 메세지 수
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="admin__section">
+                <h1 class="admin__section-title">
+                    ALARM
+                    <span>Server</span>
+                    <div class="admin__select-wrap">
+                        <select name="" id="" class="admin__select admin__select--server" title="Server" required>
+                            <option value="">전체</option>
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                </h1>
+                <div class="admin__table-wrap">
+                    <table cellpadding="0" cellspacint="0" class="admin__table">
+                        <colgroup>
+                            <col width="30px">
+                            <col width="210px">
+                            <col width="140px">
+                            <col width="250px">
+                            <col width="*">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">NO</th>
+                                <th scope="col">서버</th>
+                                <th scope="col">Level</th>
+                                <th scope="col">발생 일시</th>
+                                <th scope="col">내용</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td class="server_name">Server_1_WAS1</td>
+                                <td>CRITICAL</td>
+                                <td>YYY-MM-DD, HH:MM</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td class="server_name">Server_1_WAS2</td>
+                                <td>CRITICAL</td>
+                                <td>YYY-MM-DD, HH:MM</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td class="server_name">Server_1_WAS3</td>
+                                <td>MAJOR</td>
+                                <td>YYY-MM-DD, HH:MM</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>04</td>
+                                <td class="server_name">Server_1_WAS4</td>
+                                <td>CRITICAL</td>
+                                <td>YYY-MM-DD, HH:MM</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>05</td>
+                                <td class="server_name">Server_1_WAS5</td>
+                                <td>MAJOR</td>
+                                <td>YYY-MM-DD, HH:MM</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="admin__total-count-detail">Total : <span class="totalcount">105</span></div>
+                <div class="admin__table-paging-wrap">
+                    <ul class="admin__table-paging">
+                        <li class="prev"><a href="#">이전페이지</a></li>
+                        <li class="on"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li>...</li>
+                        <li><a href="#">98</a></li>
+                        <li><a href="#">99</a></li>
+                        <li class="next"><a href="#">다음페이지</a></li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+    </div>
+
+    <!-- //Contents -->
+
+    <!-- Footer -->
+    <div class="admin__wrap admin__wrap--footer">
+        <footer class="admin__footer">
+            <div class="connection-wrap">
+                <em class="fl">CONNECTION</em>
+                <span class="connection-info fl"></span>
+            </div>
+        </footer>
+    </div>
+    <!-- //Footer -->
+
+    <script src="./rsc/js/core.js"></script>
+
+</body>
+
+</html>

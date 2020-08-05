@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TNW Management Instrumentation</title>
+    <link rel="stylesheet" href="../rsc/css/style.css">
+    <script src="../rsc/js/jquery.min.js"></script>
+</head>
+
+<body class="main">
+    <!-- Header -->
+    <div class="admin__warp admin__warp--header">
+        <header class="admin__header">
+            <button class="btn_nav">
+                <span></span>
+            </button>
+
+            <h1 class="admin__logo"><a href="#"><img src="../rsc/img/logo.png" alt="TNW ManagementInstrumentation">TNW
+                    ManagementInstrumentation</a>
+            </h1>
+            <ul class="admin__gnb-list">
+                <li class="admin__gnb-item"><span class="ico-monitoring"></span><a href="#">Monitoring</a></li>
+                <li class="admin__gnb-item"><a href="#">Disconnected Divice ID Monitor</a></li>
+            </ul>
+            <div class="admin__update-info">
+                <div class="admin__update-detail">
+                    <span>LAST UPDATE</span>
+                    <em class="admin__update-date">2020.07.24 17:30:45</em>
+                    <em class="admin__update-time">17:30:45</em>
+                </div>
+                <a href="#" class="refresh-btn ico-refresh">Logout</a>
+            </div>
+        </header>
+    </div>
+    <!-- //Header -->
+
+    <!-- Side Navigation -->
+    <div class="admin__snb-wrap">
+        <div class="admin__login-info">
+            <div class="admin__login-user fl">
+                <img src="../rsc/img/user_01.jpg" alt="">
+            </div>
+            <div class="admin__login-detail fl">
+                <span>Hi</span>
+                <div><span class="admin__login-name">관리자(admin)</span>님</div>
+                <a href="#" class="setting-btn">Setting</a>
+                <a href="#" class="logout-btn">Log-out</a>
+            </div>
+        </div>
+        <ul class="admin__snb">
+            <li><a href="../main.html"><span class="ico-home-bk"></span>HOME</a></li>
+            <li class=""><a href="#"><span class="ico-monitoring-bk"></span>Monitoring</a>
+                <ul>
+                    <li><a href="./connection.html">Connection Monitor</a></li>
+                    <li><a href="#">Disconnected Device ID Monitor</a></li>
+                    <li><a href="./publish.html">Publish Monitor</a></li>
+                    <li><a href="#">Subscription Monitor</a></li>
+                    <li><a href="#">Server Monitor</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="ico-messaging-bk"></span>Messaging</a>
+                <ul>
+                    <li><a href="#">TNW Server</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="ico-server-bk"></span>Server</a>
+                <ul>
+                    <li><a href="#">User ID Management</a></li>
+                    <li><a href="#">Server Control</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="ico-webui-bk"></span>Web UI Management</a>
+                <ul>
+                    <li><a href="#">Web UI Users</a></li>
+                    <li><a href="#">Web UI Settings</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="admin__snb-background"></div>
+    <!-- //Side Navigation -->
+
+    <!-- Contents -->
+    <form action="" method="post">
+        <div class="admin__wrap admin__wrap--contents">
+            <article class="admin__contents">
+                <h1 class="hide">Dashboard</h1>
+                <div class="admin__section-wrap">
+                    <div class="admin__section-wrap-left fl">
+                        <section class="admin__section admin__list-of-server">
+                            <h1 class="admin__section-title">
+                                LIST OF SERVER
+                            </h1>
+                            <div class="admin__table-wrap">
+                                <table cellpadding="0" cellspacint="0" class="admin__table">
+                                    <colgroup>
+                                        <col width="30px">
+                                        <col width="210px">
+                                        <col width="*">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">NO</th>
+                                            <th scope="col">Server Name</th>
+                                            <th scope="col">IP Address</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="server_name">Server_1_WAS1</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td class="server_name">Server_1_WAS2</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td class="server_name">Server_1_WAS3</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td class="server_name">Server_1_WAS4</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td class="server_name">Server_1_WAS5</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td class="server_name">Server_1_WAS6</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td class="server_name">Server_1_WAS7</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="admin__section-wrap-right fl">
+                        <section class="admin__section admin__disconnected">
+                            <h1 class="admin__section-title">
+                                DISCONNECTED DEVICE ID MANAGEMENT
+                                <div class="admin__update-info">
+                                    <div class="admin__update-detail">
+                                        <span>LAST UPDATE</span>
+                                        <em class="admin__update-date">2020.07.24 17:30:45</em>
+                                        <em class="admin__update-time">17:30:45</em>
+                                        <a href="#" class="pause-btn">새로고침</a>
+                                    </div>
+                                </div>
+                            </h1>
+                            <div class="admin__section-comment">
+                                <span>연결이 끊어진 MQTT 클라이언트를 검색하고 삭제. 최대 100개의 MQTT 클라이언트</span>
+                            </div>
+                            <form action="">
+                                <div class="admin__search-wrap">
+                                    <input type="text" placeholder="Device ID">
+                                    <input type="text" placeholder="필터">
+                                    <button class="search-btn">검색</button>
+                                    <button class="delete-btn">삭제</button>
+                                </div>
+                                <div class="admin__table-wrap">
+                                    <table cellpadding="0" cellspacint="0" class="admin__table">
+                                        <colgroup>
+                                            <col width="30px">
+                                            <col width="200px">
+                                            <col width="240px">
+                                            <col width="250px">
+                                            <col width="*">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">
+                                                    <span class="input">
+                                                        <input type="checkbox" id="chartChk1">
+                                                        <label for="chartChk1"></label>    
+                                                    </span>
+                                                </th>
+                                                <th scope="col">Device ID</th>
+                                                <th scope="col">Client IP</th>
+                                                <th scope="col">User ID</th>
+                                                <th scope="col">마지막 접속 일자</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="chartChk1">
+                                                        <label for="chartChk1"></label>    
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">TEST 3</td>
+                                                <td>183.111.206.212</td>
+                                                <td>User_01</td>
+                                                <td>2020-07-12 15:34</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="chartChk1">
+                                                        <label for="chartChk1"></label>    
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">TEST 3</td>
+                                                <td>183.111.206.212</td>
+                                                <td>User_01</td>
+                                                <td>2020-07-12 15:34</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="chartChk1">
+                                                        <label for="chartChk1"></label>    
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">TEST 3</td>
+                                                <td>183.111.206.212</td>
+                                                <td>User_01</td>
+                                                <td>2020-07-12 15:34</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="chartChk1">
+                                                        <label for="chartChk1"></label>    
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">TEST 3</td>
+                                                <td>183.111.206.212</td>
+                                                <td>User_01</td>
+                                                <td>2020-07-12 15:34</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="chartChk1">
+                                                        <label for="chartChk1"></label>    
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">TEST 3</td>
+                                                <td>183.111.206.212</td>
+                                                <td>User_01</td>
+                                                <td>2020-07-12 15:34</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="chartChk1">
+                                                        <label for="chartChk1"></label>    
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">TEST 3</td>
+                                                <td>183.111.206.212</td>
+                                                <td>User_01</td>
+                                                <td>2020-07-12 15:34</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="chartChk1">
+                                                        <label for="chartChk1"></label>    
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">TEST 3</td>
+                                                <td>183.111.206.212</td>
+                                                <td>User_01</td>
+                                                <td>2020-07-12 15:34</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="chartChk1">
+                                                        <label for="chartChk1"></label>    
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">TEST 3</td>
+                                                <td>183.111.206.212</td>
+                                                <td>User_01</td>
+                                                <td>2020-07-12 15:34</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="chartChk1">
+                                                        <label for="chartChk1"></label>    
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">TEST 3</td>
+                                                <td>183.111.206.212</td>
+                                                <td>User_01</td>
+                                                <td>2020-07-12 15:34</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="chartChk1">
+                                                        <label for="chartChk1"></label>    
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">TEST 3</td>
+                                                <td>183.111.206.212</td>
+                                                <td>User_01</td>
+                                                <td>2020-07-12 15:34</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="chartChk1">
+                                                        <label for="chartChk1"></label>    
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">TEST 3</td>
+                                                <td>183.111.206.212</td>
+                                                <td>User_01</td>
+                                                <td>2020-07-12 15:34</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="chartChk1">
+                                                        <label for="chartChk1"></label>    
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">TEST 3</td>
+                                                <td>183.111.206.212</td>
+                                                <td>User_01</td>
+                                                <td>2020-07-12 15:34</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="chartChk1">
+                                                        <label for="chartChk1"></label>    
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">TEST 3</td>
+                                                <td>183.111.206.212</td>
+                                                <td>User_01</td>
+                                                <td>2020-07-12 15:34</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="chartChk1">
+                                                        <label for="chartChk1"></label>    
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">TEST 3</td>
+                                                <td>183.111.206.212</td>
+                                                <td>User_01</td>
+                                                <td>2020-07-12 15:34</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="chartChk1">
+                                                        <label for="chartChk1"></label>    
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">TEST 3</td>
+                                                <td>183.111.206.212</td>
+                                                <td>User_01</td>
+                                                <td>2020-07-12 15:34</td>
+                                            </tr>
+                                            
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                            
+                            <div class="admin__total-count-detail">Total : <span class="totalcount">105</span></div>
+                            <div class="admin__table-paging-wrap">
+                                <ul class="admin__table-paging">
+                                    <li class="prev"><a href="#">이전페이지</a></li>
+                                    <li class="on"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li>...</li>
+                                    <li><a href="#">98</a></li>
+                                    <li><a href="#">99</a></li>
+                                    <li class="next"><a href="#">다음페이지</a></li>
+                                </ul>
+                                <div class="admin__num-list-wrap">
+                                    <span>Number of list</span>
+                                    <select name="num-list" id="" class="num-list">
+                                        <option value="">5</option>
+                                        <option value="">10</option>
+                                        <option value="">15</option>
+                                    </select>
+                                </div>    
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </form>
+
+
+    <!-- //Contents -->
+
+    <!-- Footer -->
+    <div class="admin__wrap admin__wrap--footer">
+        <footer class="admin__footer">
+            <div class="connection-wrap">
+                <em class="fl">CONNECTION</em>
+                <span class="connection-info fl"></span>
+            </div>
+        </footer>
+    </div>
+    <!-- //Footer -->
+
+    <script src="../rsc/js/core.js"></script>
+
+</body>
+
+</html>
