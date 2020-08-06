@@ -458,13 +458,13 @@
 }
 
 .admin__login-detail a.setting-btn {
-    /* background: #ffa000; */
-    background-image: linear-gradient(to right, #F09819 0%, #EDDE5D 51%, #F09819 100%);
+    background: url(../img/sprite.png);
+    background-position: 0 -172px;
 }
 
 .admin__login-detail a.logout-btn {
-    /* background: #00adee; */
-    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%);
+    background: url(../img/sprite.png);
+    background-position: -89px -172px;
 }
 
 
@@ -543,14 +543,15 @@
     display: block;
     top: -8px;
     right: 0;
-    /* background-color: #00adee; */
     color: #fff;
     font-weight: 600;
-    padding: 8px 10px;
+    padding: 5px 10px;
     border-radius: 3px;
-    /* border: 1px solid #007cab; */
     box-sizing: border-box;
-    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%)
+    background: url(../img/sprite.png);
+    background-position: -109px -139px;
+    width: 195px;
+    height: 30px;
 }
 
 
@@ -678,6 +679,11 @@
     border-bottom: 1px solid #cbcbcb;
 }
 
+.admin__list-of-server .admin__table tbody tr:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
 .admin__table td {
     position: relative;
     text-align: center;
@@ -793,7 +799,6 @@
 
 .admin__list-of-server {
     width: 470px;
-    height: 825px;
 }
 
 .admin__connection-data,
@@ -808,7 +813,7 @@
 .admin__subscription .admin__update-info,
 .admin__server-monitor .admin__update-info {
     color: #333;
-    padding: 0px 94px 0 0;
+    padding: 0px 124px 0 0;
 }
 
 .admin__connection-data .admin__update-info .pause-btn,
@@ -819,14 +824,16 @@
     display: block;
     top: -8px;
     right: 0;
-    /* background-color: #00adee; */
     color: #fff;
     font-weight: 500;
     padding: 7px 10px;
     border-radius: 2px;
-    /* border: 1px solid #007cab; */
     box-sizing: border-box;
-    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%)
+    background: url(../img/sprite.png);
+    background-position: 0 -139px;
+    width: 99px;
+    height: 29px;
+    text-align: center;
 }
 
 .admin__search-wrap {
@@ -876,8 +883,8 @@
 }
 
 .admin__search-wrap .search-btn {
-    background: #ccc;
-    border: 1px solid #666;
+    background: url(../img/sprite.png) no-repeat;
+    background-position: 0 -99px;
 }
 
 .admin__search-wrap .delete-btn {
@@ -885,9 +892,8 @@
     right: 40px;
     color: #fff;
     cursor: pointer;
-    /* border: 1px solid #d18300; */
-    /* background: #ffa000; */
-    background-image: linear-gradient(to right, #F09819 0%, #EDDE5D 51%, #F09819 100%);
+    background: url(../img/sprite.png);
+    background-position: -90px -99px;
 }
 .admin__search-wrap .add-btn {
     position: absolute;
