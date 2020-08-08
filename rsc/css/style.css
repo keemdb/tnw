@@ -323,10 +323,11 @@
 }
 
 .admin__snb > li {
-    padding: 0 10px;
+    padding: 0;
 }
 
-.admin__snb > li:hover {
+.admin__snb > li:hover,
+.admin__snb > li.active {
     background: #eee;
 }
 
@@ -335,16 +336,17 @@
     display: block; 
     height: 60px; 
     line-height: 60px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: #6a6c6f;
     text-indent: 38px;
+    padding: 0 0 0 10px;
 }
 
 .admin__snb > li > a > span {
     position: absolute;
     top: 17px;
-    left: 0px;
+    left: 15px;
 }
 
 .admin__snb > li~li > a:after {
@@ -352,16 +354,21 @@
     display: block;
     position: absolute;
     top: 26px;
-    right: 0;
+    right: 20px;
     background: url(../img/sprite.png) no-repeat;
     background-position: -470px -147px;
     width: 9px;
     height: 7px;
 }
 
+.admin__snb > li.on:first-child > a:after {
+    display: none;
+}
+
 .admin__snb ul {
     display: none;
-    padding: 0 0 0 56px;
+    padding: 10px 0 0 56px;
+    background: #fff;
 }
 
 .admin__snb ul a {
@@ -383,14 +390,15 @@
     display: block;
     position: absolute;
     top: 26px;
-    right: 0;
+    right: 20px;
     background: url(../img/sprite.png) no-repeat;
     background-position: -436px -147px;
     width: 9px;
     height: 7px;
 }
 
-.admin__snb ul a:hover:before {
+.admin__snb ul a:hover:before,
+.admin__snb ul a.active:before {
     content: '';
     display: block;
     position: absolute;
@@ -475,6 +483,12 @@
     background-position: -89px -172px;
 }
 
+.admin__login-detail a.setting-btn:hover,
+.admin__login-detail a.logout-btn:hover {
+    background-position: -178px -172px;
+}
+
+
 
 
 /* 공통 */
@@ -539,7 +553,7 @@
 
 .admin__section-comment {
     position: relative;
-    margin-top: 24px;
+    margin-top: 14px;
     line-height: 20px;
 }
 
@@ -561,6 +575,19 @@
     background-position: -109px -139px;
     width: 195px;
     height: 30px;
+}
+
+.admin__section-comment .pause-btn:hover{
+    background-position: 0 -201px;
+}
+
+.admin__section-subcomment {
+    margin: 12px 0;
+}
+
+.admin__section-subcomment em {
+    font-weight: 600;
+    font-size: 16px;
 }
 
 
@@ -659,22 +686,43 @@
     height: 13px;
 }
 
+.admin__table-wrap {
+    overflow: auto;
+}
+
 .admin__quick-stats {
     margin-left: 30px;
     width: calc(100% - 381px);
-    max-height: 299px;
-    overflow-y: auto;
+}
+
+.admin__quick-stats .admin__table-wrap {
+    height: 240px;
 }
 
 .admin__quick-chart {
-    height: 380px;
+    height: 310px;
     overflow-y: auto;
 }
 
 .admin__alarm {
-    height: 342px;
-    overflow: auto;
+    height: 289px;
 }
+
+.admin__alarm .admin__table-wrap {
+    height: 200px;
+}
+
+.admin__conn-policies .admin__table-wrap {
+    height: 155px;
+}
+.admin__pub-policies .admin__table-wrap {
+    height: 155px;
+}
+.admin__sub-policies .admin__table-wrap {
+    height: 155px;
+}
+
+
 
 .admin__table {
     width: 100%;
@@ -698,6 +746,10 @@
     border-bottom: 1px solid #cbcbcb;
 }
 
+.admin__list-of-server .admin__table-wrap {
+    max-height: 872px;
+}
+
 .admin__list-of-server .admin__table tbody tr:hover {
     background-color: #ccc;
     cursor: pointer;
@@ -707,7 +759,7 @@
     position: relative;
     text-align: center;
     vertical-align: middle;
-    padding: 14px 0;
+    padding: 10px 0;
     border: 1px solid #eaeaea;
 }
 
@@ -746,8 +798,10 @@
 }
 
 .admin__total-count-detail {
-    margin-top: 30px;
     font-weight: 500;
+    position: absolute;
+    top: 9px;
+    left: 0;
 }
 
 .admin__select {height:24px;padding:0 158px 0 22px;box-sizing:border-box;font-size:15px;letter-spacing:-0.5px;}
@@ -765,7 +819,7 @@
 }
 
 .admin__chart-wrap {
-    margin: 40px 0 0 0;
+    margin: 40px 0 0 60px;
 }
 
 .admin__chart-wrap ul:after {
@@ -818,65 +872,102 @@
 
 .admin__list-of-server {
     width: 470px;
+    max-height: 930px;
 }
 
-.admin__disconnected {
-    height: 880px;
+.admin__connection {
+    height: 390px;
+    overflow: auto;
 }
+
+.admin__connection-data .admin__table-wrap {
+    height: 324px;
+}
+
+.admin__disconnected .admin__table-wrap {
+    height: 750px;
+}
+
+.admin__publish .admin__table-wrap {
+    height: 750px;
+}
+
+.admin__subscription .admin__table-wrap {
+    height: 710px;
+}
+
+.admin__disconnected,
+.admin__publish,
+.admin__subscription,
 .admin__server-monitor {
-    height: 901px;
+    max-height: 931px;
 }
 
 .admin__connection-data,
-.admin__disconnected,
-.admin__subscription,
 .admin__server-monitor {
     position: relative;
-    overflow: auto;
 }
 
 .admin__connection-data .admin__update-info,
 .admin__disconnected .admin__update-info,
+.admin__publish .admin__update-info,
 .admin__subscription .admin__update-info,
-.admin__server-monitor .admin__update-info {
+.admin__server-monitor .admin__update-info,
+.admin__conn-policies .admin__update-info,
+.admin__pub-policies .admin__update-info,
+.admin__sub-policies .admin__update-info {
     color: #333;
     padding: 0px 124px 0 0;
 }
 
 .admin__connection-data .admin__update-info .pause-btn,
 .admin__disconnected .admin__update-info .pause-btn,
+.admin__publish .admin__update-info .pause-btn,
 .admin__subscription .admin__update-info .pause-btn,
-.admin__server-monitor .admin__update-info .pause-btn {
+.admin__server-monitor .admin__update-info .pause-btn,
+.admin__conn-policies .admin__update-info .pause-btn,
+.admin__pub-policies .admin__update-info .pause-btn,
+.admin__sub-policies .admin__update-info .pause-btn {
     position: absolute;
     display: block;
-    top: -8px;
+    top: -6px;
     right: 0;
     color: #fff;
     font-weight: 500;
-    padding: 7px 10px;
+    padding: 0px 10px;
     border-radius: 2px;
     box-sizing: border-box;
     background: url(../img/sprite.png);
     background-position: 0 -139px;
-    width: 99px;
-    height: 29px;
+    width: 82px;
+    height: 24px;
     text-align: center;
+    line-height: 24px;
 }
+
+.admin__update-info .pause-btn:hover {
+    background-position: -178px -171px;
+}
+
 
 .admin__search-wrap {
     text-align: right;
-    margin: 20px 0;
+    margin: 6px 0;
 }
 
 .admin__connection-data .admin__search-wrap,
 .admin__disconnected .admin__search-wrap,
-.admin__subscription .admin__search-wrap {
+.admin__publish .admin__search-wrap,
+.admin__subscription .admin__search-wrap,
+.admin__conn-policies .admin__search-wrap,
+.admin__pub-policies .admin__search-wrap,
+.admin__sub-policies .admin__search-wrap {
     text-align: left;
 }
 
 .admin__search-wrap select {
     width: 360px;
-    height: 30px;
+    height: 24px;
     border: 1px solid #ccc;
     text-indent: 20px;
     box-sizing: border-box;
@@ -888,35 +979,41 @@
 
 .admin__search-wrap input {
     width: 210px;
-    height: 30px;
+    height: 24px;
     border: 1px solid #ccc;
     box-sizing: border-box;
     outline: 0;
     text-indent: 20px;
+    vertical-align: middle;
 }
 
 .admin__search-wrap button {
     display: inline-block;
-    width: 80px;
-    height: 30px;
+    width: 64px;
+    height: 24px;
     box-sizing: border-box;
     border: 0;
     outline: 0;
-    border-radius: 2px;
+    border-radius: 3px;
     text-align: center;
     vertical-align: middle;
-    line-height: 30px;
+    line-height: 24px;
     color: #333;
 }
 
 .admin__search-wrap .search-btn {
     background: url(../img/sprite.png) no-repeat;
     background-position: 0 -99px;
+    cursor: pointer;
+}
+
+.admin__search-wrap .search-btn:hover {
+    color: #fff;
 }
 
 .admin__search-wrap .delete-btn {
     position: absolute;
-    right: 40px;
+    right: 57px;
     color: #fff;
     cursor: pointer;
     background: url(../img/sprite.png);
@@ -924,15 +1021,20 @@
 }
 .admin__search-wrap .add-btn {
     position: absolute;
-    right: 130px;
+    right: 137px;
     color: #fff;
     cursor: pointer;
     background: url(../img/sprite.png);
     background-position: -180px -99px;
 }
+.admin__search-wrap .delete-btn:hover,
+.admin__search-wrap .add-btn:hover {
+    background-position: 0 -99px;
+}
 
 .admin__table-paging-wrap {
     position: relative;
+    margin-top: 4px;
 }
 
 .admin__num-list-wrap {
@@ -1093,8 +1195,9 @@
     font-weight: 500;
     box-sizing: border-box;
     vertical-align: middle;
+    margin-bottom: 10px;
 }
-.modal-contents input {
+.modal-contents input[type="text"] {
     width: 584px;
     height: 30px;
     border: 1px solid #ccc;
@@ -1103,19 +1206,115 @@
     text-indent: 20px;
     box-sizing: border-box;
     outline: 0;
+    margin-bottom: 10px;
 }
 .modal-contents div {
     padding-top: 10px;
+}
+.modal-contents .add-policy {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+.modal-contents .add-policy .policy-comment {
+    height: 50px;
+    line-height: 50px;
+    margin-top: 9px;
+}
+.modal-contents .add-policy .policy-comment-textarea {
+    width: 558px;
+    height: 43px;
+    line-height: 20px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    padding-left: 20px;
+}
+
+.modal-contents .add-client {
+    margin-top: 10px;
+}
+
+.modal-contents .add-client ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.modal-contents .add-client ul li {
+    float: left;
+    width: 50%;
+}
+.modal-contents .add-client ul li input[type="checkbox"] {
+    position: relative;
+    display: none;
+}
+.modal-contents .add-client ul li input[type="checkbox"] + label:before {
+    content: "";
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background: #fff;
+    margin: 0 17px 0 0;
+    vertical-align: -6px;
+    background: url('../img/sprite.png');	
+    background-position: -400px -80px;
+}
+.modal-contents .add-client ul li input[type="checkbox"]:checked + label:before {
+    background-position: -430px -80px;
+}
+.modal-contents .add-client ul li > span {
+    text-align: left;
+    background: transparent;
+    margin-right: 10px;
+}
+.modal-contents .add-client ul li input[type="text"] {
+    width: 167px;
+    background: #eee;
+    border-color: #eee;
+}
+
+.modal-contents .add-setting {
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+.modal-contents .add-setting ul li {
+    margin-bottom: 10px;
+}
+
+.modal-contents .add-setting span {
+    text-align: left;
+    width: 48%;
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+.modal-contents .add-setting input {
+    width: 48%;
+    margin-bottom: 0;
+}
+.modal-contents .add-setting ul li:last-child input {
+    width: 30%;
+}
+.modal-contents .add-setting ul li:last-child span.set-sec {
+    background-color: transparent;
+    width: 20%;
+}
+.modal-contents .add-setting select {
+    border: 1px solid #ccc;
+    width: 48%;
+    height: 30px;
+    border-radius: 2px;
+    text-indent: 20px;
+    outline: 0;
 }
 .modal-btns {
     margin-bottom: 34px;
     text-align: center;
 }
-
 .save-btn,
 .close-btn {
-    width: 80px;
-    height: 30px;
+    width: 121px;
+    height: 29px;
     border-radius: 3px;
     box-sizing: border-box;
     color: #fff;
@@ -1128,7 +1327,7 @@
 }
 
 .save-btn {
-    background-position: -180px -99px;
+    background-position: 0 -234px;
 }
 
 .close-btn {
@@ -1137,8 +1336,14 @@
     letter-spacing: 0;
     font-size: 14px;
     background: url(../img/sprite.png);
-    background-position: -90px -99px;
+    background-position: -130px -234px;
 }
+
+.save-btn:hover,
+.close-btn:hover {
+    background-position: -259px -234px;
+}
+
 
 
 /* Footer */

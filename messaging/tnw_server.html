@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TNW Management Instrumentation</title>
+    <link rel="stylesheet" href="../rsc/css/style.css">
+    <script src="../rsc/js/jquery.min.js"></script>
+</head>
+
+<body class="main">
+    <!-- Header -->
+    <div class="admin__warp admin__warp--header">
+        <header class="admin__header">
+            <button class="btn_nav">
+                <span></span>
+            </button>
+
+            <h1 class="admin__logo"><a href="#"><img src="../rsc/img/logo.png" alt="TNW ManagementInstrumentation">TNW
+                    ManagementInstrumentation</a>
+            </h1>
+            <ul class="admin__gnb-list">
+                <li class="admin__gnb-item"><span class="ico-monitoring"></span><a href="#">Messaging</a></li>
+                <li class="admin__gnb-item"><a href="#">TNW Server</a></li>
+            </ul>
+            <div class="admin__update-info">
+                <div class="admin__update-detail">
+                    <span>LAST UPDATE</span>
+                    <em class="admin__update-date">2020.07.24 17:30:45</em>
+                    <em class="admin__update-time">17:30:45</em>
+                </div>
+                <a href="#" class="refresh-btn ico-refresh">Logout</a>
+            </div>
+        </header>
+    </div>
+    <!-- //Header -->
+
+    <!-- Side Navigation -->
+    <div class="admin__snb-wrap">
+        <div class="admin__login-info">
+            <div class="admin__login-user fl">
+                <img src="../rsc/img/user_01.jpg" alt="">
+            </div>
+            <div class="admin__login-detail fl">
+                <span>Hi</span>
+                <div><span class="admin__login-name">관리자(admin)</span>님</div>
+                <a href="#" class="setting-btn">Setting</a>
+                <a href="#" class="logout-btn">Log-out</a>
+            </div>
+        </div>
+        <ul class="admin__snb">
+            <li><a href="../main.html"><span class="ico-home-bk"></span>HOME</a></li>
+            <li><a href="#"><span class="ico-monitoring-bk"></span>Monitoring</a>
+                <ul>
+                    <li><a href="../monitoring/connection.html">Connection Monitor</a></li>
+                    <li><a href="../monitoring/disconnected.html">Disconnected Device ID Monitor</a></li>
+                    <li><a href="../monitoring/publish.html">Publish Monitor</a></li>
+                    <li><a href="../monitoring/subscription.html">Subscription Monitor</a></li>
+                    <li><a href="../monitoring/server.html">Server Monitor</a></li>
+                </ul>
+            </li>
+            <li class="active on"><a href="#"><span class="ico-messaging-bk"></span>Messaging</a>
+                <ul>
+                    <li><a href="#" class="active">TNW Server</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="ico-server-bk"></span>Server</a>
+                <ul>
+                    <li><a href="#">User ID Management</a></li>
+                    <li><a href="#">Server Control</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="ico-webui-bk"></span>Web UI Management</a>
+                <ul>
+                    <li><a href="#">Web UI Users</a></li>
+                    <li><a href="#">Web UI Settings</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="admin__snb-background"></div>
+    <!-- //Side Navigation -->
+
+    <!-- Contents -->
+    <form>
+        <div class="admin__wrap admin__wrap--contents">
+            <article class="admin__contents">
+                <h1 class="hide">Dashboard</h1>
+                <div class="admin__section-wrap">
+                    <div class="admin__section-wrap-left fl">
+                        <section class="admin__section admin__list-of-server">
+                            <h1 class="admin__section-title">
+                                LIST OF SERVER
+                            </h1>
+                            <div class="admin__table-wrap">
+                                <table cellpadding="0" cellspacint="0" class="admin__table">
+                                    <colgroup>
+                                        <col width="58px">
+                                        <col width="160px">
+                                        <col width="*">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">NO</th>
+                                            <th scope="col">Server Name</th>
+                                            <th scope="col">IP Address</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="server_name">Server_1_WAS1</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td class="server_name">Server_1_WAS2</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td class="server_name">Server_1_WAS3</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td class="server_name">Server_1_WAS4</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td class="server_name">Server_1_WAS5</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td class="server_name">Server_1_WAS6</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td class="server_name">Server_1_WAS7</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td class="server_name">Server_1_WAS7</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td class="server_name">Server_1_WAS7</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td class="server_name">Server_1_WAS7</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td class="server_name">Server_1_WAS7</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td class="server_name">Server_1_WAS7</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td class="server_name">Server_1_WAS7</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td class="server_name">Server_1_WAS7</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td class="server_name">Server_1_WAS7</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td class="server_name">Server_1_WAS7</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td class="server_name">Server_1_WAS7</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td class="server_name">Server_1_WAS7</td>
+                                            <td>112.169.110.141</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="admin__section-wrap-right fl">
+                        <section class="admin__section admin__conn-policies">
+                            <h1 class="admin__section-title">
+                                TNW SERVER
+                                <div class="admin__update-info">
+                                    <div class="admin__update-detail">
+                                        <span>LAST UPDATE</span>
+                                        <em class="admin__update-date">2020.07.24 17:30:45</em>
+                                        <em class="admin__update-time">17:30:45</em>
+                                        <a href="#" class="pause-btn">새로고침</a>
+                                    </div>
+                                </div>
+                            </h1>
+                            <!-- <div class="admin__section-comment">
+                                <span>- 시스템 관리자 및 메시징 관리자는 메시지 허브를 정의, 편집 또는 삭제할 수 있다. 메시지 허브는 관련 엔드 포인트, 연결 정책 및 메시징
+                                    정책을 그룹화하는 조직 구성 개체이다.</span><br>
+                                <span>- Endpoint는 클라이언트 애플리케이션이 연결할 수 있는 포트이며, 엔드포인트에는 적어도 하나의 연결 정책과 하나의 메시징 정책이 있어야
+                                    한다.</span><br>
+                                <span>- 연결 정책은 클라이언트가 엔드 포인트에 연결할 수 있는 권한을 부여하고, 메시징 정책은 엔드 포인트에 연결되면 특정 메시징 작업에 대한
+                                    클라이언트를 인증한다.</span><br>
+                            </div> -->
+                            <form action="">
+                                <div class="admin__section-subcomment">
+                                    <em>Connection Policies |</em>
+                                    <span>연결 정책은 클라이언트가 Message Gateway Endpoint에 연결할 수 있도록 승인한다. 각 끝점에는 적어도 하나의 연결 정책이
+                                        있어야 한다.</span>
+                                </div>
+                                <div class="admin__search-wrap">
+                                    <input type="text" placeholder="필터">
+                                    <button type="button" class="search-btn">검색</button>
+                                    <button type="button" class="add-btn" id="connModalBtn">등록</button>
+                                    <button type="button" class="delete-btn">삭제</button>
+                                </div>
+                                <div class="admin__table-wrap">
+                                    <table cellpadding="0" cellspacint="0" class="admin__table">
+                                        <colgroup>
+                                            <col width="58px">
+                                            <col width="250px">
+                                            <col width="240px">
+                                            <col width="250px">
+                                            <col width="*">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">
+                                                    <span class="input">
+                                                        <input type="checkbox" id="cb_all">
+                                                        <label for="cb_all"></label>
+                                                    </span>
+                                                </th>
+                                                <th scope="col">연결 정책</th>
+                                                <th scope="col">장시간 구독하는 Client 허용</th>
+                                                <th scope="col">지속적인 메시지 허용</th>
+                                                <th scope="col">비고</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="cb_1">
+                                                        <label for="cb_1"></label>
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">DemoConnectionPolicy</td>
+                                                <td>True</td>
+                                                <td>True</td>
+                                                <td>Demo Connection Policy.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="cb_2">
+                                                        <label for="cb_2"></label>
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">DemoConnectionPolicy</td>
+                                                <td>True</td>
+                                                <td>True</td>
+                                                <td>Demo Connection Policy.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="cb_3">
+                                                        <label for="cb_3"></label>
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">DemoConnectionPolicy</td>
+                                                <td>True</td>
+                                                <td>True</td>
+                                                <td>Demo Connection Policy.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="admin__table-paging-wrap">
+                                    <div class="admin__total-count-detail">Total : <span class="totalcount">105</span>
+                                    </div>
+                                    <ul class="admin__table-paging">
+                                        <li class="prev"><a href="#">이전페이지</a></li>
+                                        <li class="on"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li>...</li>
+                                        <li><a href="#">98</a></li>
+                                        <li><a href="#">99</a></li>
+                                        <li class="next"><a href="#">다음페이지</a></li>
+                                    </ul>
+                                    <div class="admin__num-list-wrap">
+                                        <span>Number of list</span>
+                                        <select name="num-list" id="" class="num-list">
+                                            <option value="">5</option>
+                                            <option value="">10</option>
+                                            <option value="">15</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+
+                        <section class="admin__section admin__pub-policies">
+                            <form action="">
+                                <div class="admin__section-subcomment">
+                                    <em>Publish Policies |</em>
+                                    <span>토픽 정책을 사용하면 클라이언트가 Message Gateway에서 엑세스 할 수 있는 토픽을 제어 할 수 있다.</span>
+                                </div>
+                                <div class="admin__search-wrap">
+                                    <input type="text" placeholder="필터">
+                                    <button type="button" class="search-btn">검색</button>
+                                    <button type="button" class="add-btn" id="pubModalBtn">등록</button>
+                                    <button type="button" class="delete-btn">삭제</button>
+                                </div>
+                                <div class="admin__table-wrap">
+                                    <table cellpadding="0" cellspacint="0" class="admin__table">
+                                        <colgroup>
+                                            <col width="58px">
+                                            <col width="250px">
+                                            <col width="240px">
+                                            <col width="250px">
+                                            <col width="250px">
+                                            <col width="*">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">
+                                                    <span class="input">
+                                                        <input type="checkbox" id="cb_all2">
+                                                        <label for="cb_all2"></label>
+                                                    </span>
+                                                </th>
+                                                <th scope="col">메세징 정책</th>
+                                                <th scope="col">최대 메세지 수</th>
+                                                <th scope="col">권한</th>
+                                                <th scope="col">토픽</th>
+                                                <th scope="col">비고</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="cb_2_1">
+                                                        <label for="cb_2_1"></label>
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">DemoTopicPolicy</td>
+                                                <td>5,000</td>
+                                                <td>Publish, Subscribe</td>
+                                                <td>-</td>
+                                                <td>Demo Connection Policy</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="cb_2_2">
+                                                        <label for="cb_2_2"></label>
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">DemoTopicPolicy</td>
+                                                <td>5,000</td>
+                                                <td>Publish, Subscribe</td>
+                                                <td>-</td>
+                                                <td>Demo Connection Policy</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="cb_2_3">
+                                                        <label for="cb_2_3"></label>
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">DemoTopicPolicy</td>
+                                                <td>5,000</td>
+                                                <td>Publish, Subscribe</td>
+                                                <td>-</td>
+                                                <td>Demo Connection Policy</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div class="admin__table-paging-wrap">
+                                    <div class="admin__total-count-detail">Total : <span class="totalcount">105</span>
+                                    </div>
+                                    <ul class="admin__table-paging">
+                                        <li class="prev"><a href="#">이전페이지</a></li>
+                                        <li class="on"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li>...</li>
+                                        <li><a href="#">98</a></li>
+                                        <li><a href="#">99</a></li>
+                                        <li class="next"><a href="#">다음페이지</a></li>
+                                    </ul>
+                                    <div class="admin__num-list-wrap">
+                                        <span>Number of list</span>
+                                        <select name="num-list" id="" class="num-list">
+                                            <option value="">5</option>
+                                            <option value="">10</option>
+                                            <option value="">15</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+
+                        <section class="admin__section admin__sub-policies">
+                            <form action="">
+                                <div class="admin__section-subcomment">
+                                    <em>Subscription Policies |</em>
+                                    <span>구독 정책을 사용하면 클라이언트가 Message Gateway에서 엑세스 할 수 있는 글로벌 공유 지속 구독을 제어 할 수
+                                        있다.</span>
+                                </div>
+                                <div class="admin__search-wrap">
+                                    <input type="text" placeholder="필터">
+                                    <button type="button" class="search-btn">검색</button>
+                                    <button type="button" class="add-btn" id="subModalBtn">등록</button>
+                                    <button type="button" class="delete-btn">삭제</button>
+                                </div>
+                                <div class="admin__table-wrap">
+                                    <table cellpadding="0" cellspacint="0" class="admin__table">
+                                        <colgroup>
+                                            <col width="58px">
+                                            <col width="250px">
+                                            <col width="240px">
+                                            <col width="250px">
+                                            <col width="*">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">
+                                                    <span class="input">
+                                                        <input type="checkbox" id="cb_all3">
+                                                        <label for="cb_all3"></label>
+                                                    </span>
+                                                </th>
+                                                <th scope="col">메세징 정책</th>
+                                                <th scope="col">최대 메세지 수</th>
+                                                <th scope="col">권한</th>
+                                                <th scope="col">비고</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="cb_3_1">
+                                                        <label for="cb_3_1"></label>
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">DemoTopicPolicy</td>
+                                                <td>5,000</td>
+                                                <td>Publish, Subscribe</td>
+                                                <td>Demo Connection Policy</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="cb_3_2">
+                                                        <label for="cb_3_2"></label>
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">DemoTopicPolicy</td>
+                                                <td>5,000</td>
+                                                <td>Publish, Subscribe</td>
+                                                <td>Demo Connection Policy</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="input">
+                                                        <input type="checkbox" id="cb_3_3">
+                                                        <label for="cb_3_3"></label>
+                                                    </span>
+                                                </td>
+                                                <td class="device_id">DemoTopicPolicy</td>
+                                                <td>5,000</td>
+                                                <td>Publish, Subscribe</td>
+                                                <td>Demo Connection Policy</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div class="admin__table-paging-wrap">
+                                    <div class="admin__total-count-detail">Total : <span class="totalcount">105</span>
+                                    </div>
+                                    <ul class="admin__table-paging">
+                                        <li class="prev"><a href="#">이전페이지</a></li>
+                                        <li class="on"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li>...</li>
+                                        <li><a href="#">98</a></li>
+                                        <li><a href="#">99</a></li>
+                                        <li class="next"><a href="#">다음페이지</a></li>
+                                    </ul>
+                                    <div class="admin__num-list-wrap">
+                                        <span>Number of list</span>
+                                        <select name="num-list" id="" class="num-list">
+                                            <option value="">5</option>
+                                            <option value="">10</option>
+                                            <option value="">15</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </form>
+
+
+                        </section>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </form>
+    <!-- //Contents -->
+
+    <!-- Connection Policies Modal -->
+    <div class="modal-wrap" id="connModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                ADD CONNECTION POLICIES
+            </div>
+            <div class="modal-explan">
+            </div>
+            <form>
+                <div class="modal-contents">
+                    <div class="add-policy">
+                        <span>정책 이름</span>
+                        <input type="text" placeholder="DemoConnectionPolicy">
+                        <span class="policy-comment">설명</span>
+                        <textarea name="policy-comment" form="inform" cols="30" rows="10" placeholder="설명"
+                            class="policy-comment-textarea"></textarea>
+                    </div>
+                    <div class="add-client">
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="clientChk">
+                                <label for="clientChk"></label>
+                                <span>Client IP Address</span>
+                                <input type="text">
+                            </li>
+                            <li>
+                                <input type="checkbox" id="deviceChk">
+                                <label for="deviceChk"></label>
+                                <span>Device ID</span>
+                                <input type="text">
+                            </li>
+                            <li>
+                                <input type="checkbox" id="useridChk">
+                                <label for="useridChk"></label>
+                                <span>User ID</span>
+                                <input type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-btns">
+                    <button type="button" class="save-btn">Save</button>
+                    <a href="#" class="close-btn">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- //Connection Policies Modal -->
+
+    <!-- Publish Policies Modal -->
+    <div class="modal-wrap" id="pubModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                ADD PUBLISH POLICIES
+            </div>
+            <div class="modal-explan">
+            </div>
+            <form>
+                <div class="modal-contents">
+                    <div class="add-policy">
+                        <span>정책 이름</span>
+                        <input type="text" placeholder="DemoConnectionPolicy">
+                        <span class="policy-comment">설명</span>
+                        <textarea name="policy-comment" form="inform" cols="30" rows="10" placeholder="설명"
+                            class="policy-comment-textarea"></textarea>
+                    </div>
+                    <div class="add-client">
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="clientChk">
+                                <label for="clientChk"></label>
+                                <span>Client IP Address</span>
+                                <input type="text">
+                            </li>
+                            <li>
+                                <input type="checkbox" id="deviceChk">
+                                <label for="deviceChk"></label>
+                                <span>Device ID</span>
+                                <input type="text">
+                            </li>
+                            <li>
+                                <input type="checkbox" id="useridChk">
+                                <label for="useridChk"></label>
+                                <span>User ID</span>
+                                <input type="text">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="add-setting">
+                        <ul>
+                            <li>
+                                <span class="set-title">Publish Topic</span>
+                                <input type="text" placeholder="내용">
+                            </li>
+                            <li>
+                                <span class="set-title">Subscription에서 유지할 최대 메시지 수</span>
+                                <input type="text" placeholder="내용">
+                            </li>
+                            <li>
+                                <span class="set-title">최대 메시지 값에 도달했을 경우 적용되는 동작</span>
+                                <select name="" id="">
+                                    <option value="">새 메시지 거절</option>
+                                    <option value="">1</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span class="set-title"> Publish된 메시지가 유지할 수 있는 최대 시간</span>
+                                <input type="text" placeholder="5">
+                                <span class="set-sec">seconds</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-btns">
+                    <button type="button" class="save-btn">Save</button>
+                    <a href="#" class="close-btn">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- //Publish Policies Modal -->
+
+    <!-- Subscription Policies Modal -->
+    <div class="modal-wrap" id="subModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                ADD SUBSCRIPTION POLICIES
+            </div>
+            <div class="modal-explan">
+            </div>
+            <form>
+                <div class="modal-contents">
+                    <div class="add-policy">
+                        <span>정책 이름</span>
+                        <input type="text" placeholder="DemoConnectionPolicy">
+                        <span class="policy-comment">설명</span>
+                        <textarea name="policy-comment" form="inform" cols="30" rows="10" placeholder="설명"
+                            class="policy-comment-textarea"></textarea>
+                    </div>
+                    <div class="add-client">
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="clientChk">
+                                <label for="clientChk"></label>
+                                <span>Client IP Address</span>
+                                <input type="text">
+                            </li>
+                            <li>
+                                <input type="checkbox" id="deviceChk">
+                                <label for="deviceChk"></label>
+                                <span>Device ID</span>
+                                <input type="text">
+                            </li>
+                            <li>
+                                <input type="checkbox" id="useridChk">
+                                <label for="useridChk"></label>
+                                <span>User ID</span>
+                                <input type="text">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="add-setting">
+                        <ul>
+                            <li>
+                                <span class="set-title">Subscription에서 유지할 최대 메시지 수</span>
+                                <input type="text" placeholder="내용">
+                            </li>
+                            <li>
+                                <span class="set-title">최대 메시지 값에 도달했을 경우 적용되는 동작</span>
+                                <select name="" id="">
+                                    <option value="">새 메시지 거절</option>
+                                    <option value="">1</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-btns">
+                    <button type="button" class="save-btn">Save</button>
+                    <a href="#" class="close-btn">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- //Subscription Policies Modal -->
+
+
+    <!-- Footer -->
+    <div class="admin__wrap admin__wrap--footer">
+        <footer class="admin__footer">
+            <div class="connection-wrap">
+                <em class="fl">CONNECTION</em>
+                <span class="connection-info fl"></span>
+            </div>
+        </footer>
+    </div>
+    <!-- //Footer -->
+
+    <script src="../rsc/js/core.js"></script>
+
+</body>
+
+</html>

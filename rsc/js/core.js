@@ -16,8 +16,17 @@ $('.admin__snb-background').click(function () {
 })
 
 // Modal Event
-$('.add-btn').click(function (e) {
-    $('.modal-wrap').css('display', 'block');
+$('#addTopicBtn').click(function (e) {
+    $('#addTopic').css('display', 'block');
+});
+$('#connModalBtn').click(function (e) {
+    $('#connModal').css('display', 'block');
+});
+$('#pubModalBtn').click(function (e) {
+    $('#pubModal').css('display', 'block');
+});
+$('#subModalBtn').click(function (e) {
+    $('#subModal').css('display', 'block');
 });
 $('.close-btn').click(function () {
     $('.modal-wrap').css('display', 'none');

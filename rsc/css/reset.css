@@ -55,6 +55,7 @@ footer, header, hgroup, menu, nav, section {
 html, body {
 	line-height: 1;
     background-color: #edf0f5;
+    overflow: hidden;
 }
 ol, ul {
 	list-style: none;

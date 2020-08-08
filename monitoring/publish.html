@@ -52,18 +52,18 @@
         </div>
         <ul class="admin__snb">
             <li><a href="../main.html"><span class="ico-home-bk"></span>HOME</a></li>
-            <li class=""><a href="#"><span class="ico-monitoring-bk"></span>Monitoring</a>
+            <li class="active on"><a href="#"><span class="ico-monitoring-bk"></span>Monitoring</a>
                 <ul>
                     <li><a href="./connection.html">Connection Monitor</a></li>
                     <li><a href="./disconnected.html">Disconnected Device ID Monitor</a></li>
-                    <li><a href="#">Publish Monitor</a></li>
+                    <li><a href="#" class="active">Publish Monitor</a></li>
                     <li><a href="./subscription.html">Subscription Monitor</a></li>
                     <li><a href="./server.html">Server Monitor</a></li>
                 </ul>
             </li>
             <li><a href="#"><span class="ico-messaging-bk"></span>Messaging</a>
                 <ul>
-                    <li><a href="#">TNW Server</a></li>
+                    <li><a href="../messaging/tnw_server.html">TNW Server</a></li>
                 </ul>
             </li>
             <li><a href="#"><span class="ico-server-bk"></span>Server</a>
@@ -205,7 +205,7 @@
                         </section>
                     </div>
                     <div class="admin__section-wrap-right fl">
-                        <section class="admin__section admin__disconnected">
+                        <section class="admin__section admin__publish">
                             <h1 class="admin__section-title">
                                 PUBLISH
                                 <div class="admin__update-info">
@@ -224,7 +224,7 @@
                                 <div class="admin__search-wrap">
                                     <input type="text" placeholder="필터">
                                     <button type="button" class="search-btn">검색</button>
-                                    <button type="button" class="add-btn">등록</button>
+                                    <button type="button" class="add-btn" id="addTopicBtn">등록</button>
                                     <button type="button" class="delete-btn">삭제</button>
                                 </div>
                                 <div class="admin__table-wrap">
@@ -455,8 +455,8 @@
                                 </div>
                             </form>
 
-                            <div class="admin__total-count-detail">Total : <span class="totalcount">105</span></div>
                             <div class="admin__table-paging-wrap">
+                                <div class="admin__total-count-detail">Total : <span class="totalcount">105</span></div>
                                 <ul class="admin__table-paging">
                                     <li class="prev"><a href="#">이전페이지</a></li>
                                     <li class="on"><a href="#">1</a></li>
@@ -484,7 +484,7 @@
     <!-- //Contents -->
 
     <!-- 등록 Modal -->
-    <div class="modal-wrap">
+    <div class="modal-wrap" id="addTopic">
         <div class="modal-container">
             <div class="modal-header">
                 TOPIC 등록
