@@ -135,7 +135,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 110px;
+	height: 65pxpx;
     background: url(../img/header_bg.png) repeat-x;
     z-index: 9999;
 }
@@ -153,7 +153,7 @@
     top: 0;
     left: 0;
     width: 96px;
-    height: 110px;
+    height: 65px;
     padding: 26px;
     background: #00479b;
     cursor: pointer;
@@ -215,7 +215,7 @@
 .admin__header .admin__logo {
     float: left;
     width: 270px;
-	height: 110px;
+	height: 65px;
     padding: 0 0 0 139px;
     background:  #00479b;
 }
@@ -226,13 +226,13 @@
 }
 
 .admin__header .admin__logo img {
-    padding: 29px 0 0 0;
+    padding: 5px 0 0 0;
 }
 
 .admin__gnb-list {
     float: left;
     margin-left: 75px;
-    padding-top: 53px;
+    padding-top: 32px;
 	color: #fff;
 }
 
@@ -277,7 +277,7 @@
 
 .admin__update-info {
 	float: right;
-    padding: 56px 62px 0 0;
+    padding: 30px 62px 0 0;
     color: #fff;
 }
 
@@ -305,7 +305,7 @@
 
 .admin__snb-wrap {
     position: fixed;
-    top: 110px;
+    top: 65px;
     left: -409px;
     width: 409px;
     height: 100%;
@@ -400,7 +400,7 @@
 .admin__snb-background {
     position: fixed;
     display: none;
-    top: 110px;
+    top: 65px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -471,8 +471,8 @@
 
 /* 공통 */
 .admin__contents {
-    margin: 110px 0 0 0;
-    padding: 40px;
+    margin: 35px 0 0 0;
+    padding: 40px 24px 8px;
 }
 
 .admin__section-wrap:after {
@@ -490,15 +490,15 @@
     background-color: #fff;
     border: 1px solid #d7e0f1;
     box-sizing: border-box;
-    padding: 30px 40px;
-    margin-bottom: 34px;
+    padding: 15px 30px;
+    margin-bottom: 16px;
 }
 
 .admin__section-title {
     position: relative;
     border-bottom: 1px solid #d9dfe9;
     box-sizing: border-box;
-    padding-bottom: 26px;
+    padding-bottom: 8px;
     font-weight: bold;
 }
 .admin__section-title a {
@@ -514,6 +514,7 @@
     top: 6px;
     right: 76px;
     color: #ccc;
+    display: none;
 }
 
 .admin__section-more:after {
@@ -557,13 +558,13 @@
 
 
 .admin__message-gateway {
-    width: 370px;
-    padding: 30px 0;
+    width: 350px;
+    padding: 10px 0 0;
 }
 
 .admin__message-gateway-list .admin__item-detail {
     position: relative;
-    padding: 30px 0 20px 0;
+    padding: 10px 0;
     text-align: right;
 }
 
@@ -589,8 +590,8 @@
 .admin__item-detail em {
     display: block;
     font-weight: bold;
-    font-size: 24px;
-    margin-bottom: 14px;
+    font-size: 20px;
+    margin-bottom: 4px;
 }
 .admin__item-detail span {
     font-size: 13px;
@@ -599,7 +600,7 @@
 
 .admin__item-detail:before {
     position: absolute;
-    top: 24px;
+    top: 5px;
     left: 20px;
     width: 64px;
     height: 64px;
@@ -625,12 +626,12 @@
     position: relative;
     color: #fff;
     font-weight: bold;
-    padding: 10px 0 10px 30px;
+    padding: 6px 0 6px 30px;
 }
 
 .admin__item-title:after {
     position: absolute;
-    bottom: 10px;
+    bottom: 8px;
     right: 35px;
     content: '';
     display: block;
@@ -652,9 +653,19 @@
 
 .admin__quick-stats {
     margin-left: 30px;
-    width: calc(100% - 400px);
-    max-height: 541px;
+    width: calc(100% - 381px);
+    max-height: 317px;
     overflow-y: auto;
+}
+
+.admin__quick-chart {
+    height: 320px;
+    overflow-y: auto;
+}
+
+.admin__alarm {
+    height: 260px;
+    overflow: auto;
 }
 
 .admin__table {
@@ -666,7 +677,7 @@
     position: relative;
     text-align: center;
     vertical-align: middle;
-    padding: 22px 0 21px;
+    padding: 12px 0 10px;
     font-weight: 500;
     border: 1px solid #cbcbcb;
     border-left: 1px solid #eaeaea;
@@ -688,7 +699,7 @@
     position: relative;
     text-align: center;
     vertical-align: middle;
-    padding: 16px 0;
+    padding: 14px 0;
     border: 1px solid #eaeaea;
 }
 
@@ -1120,13 +1131,13 @@
 }
 .admin__footer {
     margin: 0 40px;
-    height: 124px;
+    height: 50px;
     border-top: 1px solid #c8d3e6;
 }
 .admin__footer .connection-wrap {
     float: right;
     width: 184px;
-    margin: 32px 28px 0 0;
+    margin: 14px 28px 0 0;
 }
 .admin__footer .connection-wrap:after {
     content: '';
