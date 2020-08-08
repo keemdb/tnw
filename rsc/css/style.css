@@ -322,6 +322,14 @@
     padding: 0 51px 0 37px;
 }
 
+.admin__snb > li {
+    padding: 0 10px;
+}
+
+.admin__snb > li:hover {
+    background: #eee;
+}
+
 .admin__snb > li > a {
     position: relative;
     display: block; 
@@ -742,12 +750,12 @@
     font-weight: 500;
 }
 
-.admin__select {height:30px;padding:0 158px 0 22px;box-sizing:border-box;font-size:15px;letter-spacing:-0.5px;}
+.admin__select {height:20px;padding:0 158px 0 22px;box-sizing:border-box;font-size:15px;letter-spacing:-0.5px;}
 
 .admin__select-wrap {
     position: absolute;
     right: 0;
-    top: 0;
+    top: -5px;
 }
 
 .admin__select--server {
@@ -812,11 +820,19 @@
     width: 470px;
 }
 
+.admin__disconnected {
+    height: 880px;
+}
+.admin__server-monitor {
+    height: 901px;
+}
+
 .admin__connection-data,
 .admin__disconnected,
 .admin__subscription,
 .admin__server-monitor {
     position: relative;
+    overflow: auto;
 }
 
 .admin__connection-data .admin__update-info,
@@ -996,14 +1012,14 @@
 
 .admin__server-chart-wrap div {
     font-weight: 600;
-    height: 257px;
-    margin-bottom: 100px;
+    height: 216px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
 }
 
 .admin__server-chart-wrap .cpu-chart {
     color: #195fe6;
-    height: 257px;
-    margin-bottom: 100px;
 }
 .admin__server-chart-wrap .memory-chart {
     color: #63c8cd;
