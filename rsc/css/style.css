@@ -150,10 +150,10 @@
 
 .admin__header .btn_nav {
     position: absolute;
-    top: 0;
+    top: -5px;
     left: 0;
     width: 96px;
-    height: 65px;
+    height: 70px;
     padding: 26px;
     background: #00479b;
     cursor: pointer;
@@ -226,7 +226,7 @@
 }
 
 .admin__header .admin__logo img {
-    padding: 5px 0 0 0;
+    padding: 13px 0 0 0;
 }
 
 .admin__gnb-list {
@@ -506,7 +506,7 @@
     position: relative;
     border-bottom: 1px solid #d9dfe9;
     box-sizing: border-box;
-    padding-bottom: 8px;
+    padding-bottom: 12px;
     font-weight: bold;
 }
 .admin__section-title a {
@@ -610,8 +610,8 @@
     position: absolute;
     top: 5px;
     left: 20px;
-    width: 64px;
-    height: 64px;
+    width: 46px;
+    height: 46px;
     content: '';
     display: block;
 }
@@ -639,7 +639,7 @@
 
 .admin__item-title:after {
     position: absolute;
-    bottom: 8px;
+    bottom: 6px;
     right: 35px;
     content: '';
     display: block;
@@ -662,23 +662,23 @@
 .admin__quick-stats {
     margin-left: 30px;
     width: calc(100% - 381px);
-    max-height: 302px;
+    max-height: 299px;
     overflow-y: auto;
 }
 
 .admin__quick-chart {
-    height: 320px;
+    height: 380px;
     overflow-y: auto;
 }
 
 .admin__alarm {
-    height: 260px;
+    height: 342px;
     overflow: auto;
 }
 
 .admin__table {
     width: 100%;
-    margin-top: 12px;
+    margin-top: 8px;
 }
 
 .admin__table th {
@@ -750,7 +750,7 @@
     font-weight: 500;
 }
 
-.admin__select {height:20px;padding:0 158px 0 22px;box-sizing:border-box;font-size:15px;letter-spacing:-0.5px;}
+.admin__select {height:24px;padding:0 158px 0 22px;box-sizing:border-box;font-size:15px;letter-spacing:-0.5px;}
 
 .admin__select-wrap {
     position: absolute;
@@ -1143,6 +1143,8 @@
 
 /* Footer */
 .admin__wrap--footer {
+    position: fixed;
+    bottom: 0;
     background: #edf0f5;
 }
 .admin__footer {
