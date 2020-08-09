@@ -714,6 +714,9 @@
 .admin__sub-policies .admin__table-wrap {
     height: 155px;
 }
+.admin__server-control .admin__table-wrap {
+    height: 800px;
+}
 
 
 
@@ -909,7 +912,8 @@
 .admin__conn-policies .admin__update-info,
 .admin__pub-policies .admin__update-info,
 .admin__sub-policies .admin__update-info,
-.admin__userid-management .admin__update-info {
+.admin__userid-management .admin__update-info,
+.admin__server-control .admin__update-info {
     color: #333;
     padding: 0px 124px 0 0;
 }
@@ -922,7 +926,8 @@
 .admin__conn-policies .admin__update-info .pause-btn,
 .admin__pub-policies .admin__update-info .pause-btn,
 .admin__sub-policies .admin__update-info .pause-btn,
-.admin__userid-management .admin__update-info .pause-btn {
+.admin__userid-management .admin__update-info .pause-btn,
+.admin__server-control .admin__update-info .pause-btn {
     position: absolute;
     display: block;
     top: -6px;
@@ -1150,6 +1155,17 @@
 .admin__userid-management .admin__table-wrap {
     height: 740px;
 }
+
+/* SERVER CONTROL */
+.admin__server-control select {
+    width: 116px;
+    height:24px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing:border-box;
+    outline: 0;
+}
+
 
 
 
@@ -1401,6 +1417,18 @@
     background-position: -430px -80px;
 }
 
+#serverStart .modal-container,
+#serverStop .modal-container {
+    width: 500px;
+}
+#serverStart .modal-contents,
+#serverStop .modal-contents {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
 
 
 
@@ -1473,6 +1501,7 @@
     margin-top: -6px;
 }
 .save-btn,
+.stop-btn,
 .close-btn {
     width: 121px;
     height: 29px;
@@ -1489,6 +1518,9 @@
 .save-btn {
     background-position: 0 -234px;
 }
+.stop-btn {
+    background-position: -388px -234px;
+}
 .close-btn {
     display: inline-block;
     line-height: 30px;
@@ -1499,6 +1531,54 @@
 }
 
 .save-btn:hover,
+.stop-btn:hover,
 .close-btn:hover {
     background-position: -259px -234px;
+}
+
+.server_lamp {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+.server_lamp.on {
+    background-color: #22d100;
+}
+
+
+
+
+
+/* toggle style */
+
+.toggle {display: none;}
+.toggle + label {
+    display: inline-block;
+    width: 70px;
+    height: 26px;
+    border-radius: 26px;
+    cursor: pointer;
+    position: relative;
+    background-color: #ccc;
+}
+.toggle + label:before {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    left: 4px;
+    bottom: 4px;
+    position: absolute;
+    background-color: #fff;
+    transition: all .4s ease;
+    border-radius: 18px;
+}
+.toggle:checked + label {background-color: #22d100;}
+.toggle:checked + label:before {
+    -webkit-transform: translateX(42px);
+    -ms-transform: translateX(42px);
+    transform: translateX(42px);
 }

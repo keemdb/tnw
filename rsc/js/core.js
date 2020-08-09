@@ -37,3 +37,23 @@ $('.reset-btn').click(function (e) {
 $('.close-btn').click(function () {
     $('.modal-wrap').css('display', 'none');
 });
+
+// Toggle Event
+var toggle = false;
+$('#server_switch1').click(function () {
+    toggle = !toggle;
+
+    if (toggle == true) {
+        $('#serverStart').css('display', 'block');
+        $('#serverLamp1').addClass('on');
+    } else {
+        $('#serverStop').css('display', 'block');
+        $('#serverLamp1').removeClass('on');
+    }
+
+});
+
+// Log Level Event
+$('#logLevel').change(function () {
+    $('.server_state').html($(this).val());
+});

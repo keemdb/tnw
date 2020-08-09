@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TNW Management Instrumentation</title>
+    <link rel="stylesheet" href="../rsc/css/style.css">
+    <script src="../rsc/js/jquery.min.js"></script>
+</head>
+
+<body class="main">
+    <!-- Header -->
+    <div class="admin__warp admin__warp--header">
+        <header class="admin__header">
+            <button class="btn_nav">
+                <span></span>
+            </button>
+
+            <h1 class="admin__logo"><a href="#"><img src="../rsc/img/logo.png" alt="TNW ManagementInstrumentation">TNW
+                    ManagementInstrumentation</a>
+            </h1>
+            <ul class="admin__gnb-list">
+                <li class="admin__gnb-item"><span class="ico-server"></span><a href="#">Server</a></li>
+                <li class="admin__gnb-item"><a href="#">Server Control</a></li>
+            </ul>
+            <div class="admin__update-info">
+                <div class="admin__update-detail">
+                    <span>LAST UPDATE</span>
+                    <em class="admin__update-date">2020.07.24 17:30:45</em>
+                    <em class="admin__update-time">17:30:45</em>
+                </div>
+                <a href="#" class="refresh-btn ico-refresh">Logout</a>
+            </div>
+        </header>
+    </div>
+    <!-- //Header -->
+
+    <!-- Side Navigation -->
+    <div class="admin__snb-wrap">
+        <div class="admin__login-info">
+            <div class="admin__login-user fl">
+                <img src="../rsc/img/user_01.jpg" alt="">
+            </div>
+            <div class="admin__login-detail fl">
+                <span>Hi</span>
+                <div><span class="admin__login-name">관리자(admin)</span>님</div>
+                <a href="#" class="setting-btn">Setting</a>
+                <a href="#" class="logout-btn">Log-out</a>
+            </div>
+        </div>
+        <ul class="admin__snb">
+            <li><a href="../main.html"><span class="ico-home-bk"></span>HOME</a></li>
+            <li><a href="#"><span class="ico-monitoring-bk"></span>Monitoring</a>
+                <ul>
+                    <li><a href="../monitoring/connection.html">Connection Monitor</a></li>
+                    <li><a href="../monitoring/disconnected.html">Disconnected Device ID Monitor</a></li>
+                    <li><a href="../monitoring/publish.html">Publish Monitor</a></li>
+                    <li><a href="../monitoring/subscription.html">Subscription Monitor</a></li>
+                    <li><a href="../monitoring/server.html">Server Monitor</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="ico-messaging-bk"></span>Messaging</a>
+                <ul>
+                    <li><a href="../messaging/tnw_server.html">TNW Server</a></li>
+                </ul>
+            </li>
+            <li class="active on"><a href="#"><span class="ico-server-bk"></span>Server</a>
+                <ul>
+                    <li><a href="./user_management.html">User ID Management</a></li>
+                    <li><a href="#" class="active">Server Control</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="ico-webui-bk"></span>Web UI Management</a>
+                <ul>
+                    <li><a href="#">Web UI Users</a></li>
+                    <li><a href="#">Web UI Settings</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="admin__snb-background"></div>
+    <!-- //Side Navigation -->
+
+    <!-- Contents -->
+    <form>
+        <div class="admin__wrap admin__wrap--contents">
+            <article class="admin__contents">
+                <h1 class="hide">Dashboard</h1>
+                <div class="admin__section-wrap">
+                    <div class="admin__section-wrap">
+                        <section class="admin__section admin__server-control">
+                            <h1 class="admin__section-title">
+                                SERVER
+                                <div class="admin__update-info">
+                                    <div class="admin__update-detail">
+                                        <span>LAST UPDATE</span>
+                                        <em class="admin__update-date">2020.07.24 17:30:45</em>
+                                        <em class="admin__update-time">17:30:45</em>
+                                        <a href="#" class="pause-btn">새로고침</a>
+                                    </div>
+                                </div>
+                            </h1>
+
+                            <form action="">
+                                <div class="admin__table-wrap">
+                                    <table cellpadding="0" cellspacint="0" class="admin__table">
+                                        <colgroup>
+                                            <col width="74px">
+                                            <col width="372px">
+                                            <col width="*">
+                                            <col width="360px">
+                                            <col width="68px">
+                                            <col width="135px">
+                                            <col width="138px">
+                                            <col width="134px">
+                                            <col width="133px">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">No</th>
+                                                <th scope="col">Server Name</th>
+                                                <th scope="col">IP Address</th>
+                                                <th scope="col">서버 가동시간</th>
+                                                <th colspan="2">기동 여부</th>
+                                                <th colspan="3">Log Level</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td class="device_id">Server_1_WAS1</td>
+                                                <td>112.169.110.141</td>
+                                                <td>5d 21h</td>
+                                                <td><span class="server_lamp" id="serverLamp1"></span></td>
+                                                <td>
+                                                    <input type="checkbox" class="toggle" id="server_switch1">
+                                                    <label for="server_switch1"></label>
+                                                </td>
+                                                <td><span class="server_state">Maximum</span></td>
+                                                <td>
+                                                    <select name="" id="logLevel">
+                                                        <option value="Maximum">Maximum</option>
+                                                        <option value="Normal">Normal</option>
+                                                    </select>
+                                                </td>
+                                                <td><a href="#" class="reset-btn">Application</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td class="device_id">Server_1_WAS1</td>
+                                                <td>112.169.110.141</td>
+                                                <td>5d 21h</td>
+                                                <td><span class="server_lamp" id="serverLamp2"></span></td>
+                                                <td>
+                                                    <input type="checkbox" class="toggle" id="server_switch2">
+                                                    <label for="server_switch2"></label>
+                                                </td>
+                                                <td><span class="">Maximum</span></td>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="Maximum">Maximum</option>
+                                                        <option value="Normal">Normal</option>
+                                                    </select>
+                                                </td>
+                                                <td><a href="#" class="reset-btn">Application</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td class="device_id">Server_1_WAS1</td>
+                                                <td>112.169.110.141</td>
+                                                <td>5d 21h</td>
+                                                <td><span class="server_lamp" id="serverLamp3"></span></td>
+                                                <td>
+                                                    <input type="checkbox" class="toggle" id="server_switch3">
+                                                    <label for="server_switch3"></label>
+                                                </td>
+                                                <td><span class="">Maximum</span></td>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="Maximum">Maximum</option>
+                                                        <option value="Normal">Normal</option>
+                                                    </select>
+                                                </td>
+                                                <td><a href="#" class="reset-btn">Application</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td class="device_id">Server_1_WAS1</td>
+                                                <td>112.169.110.141</td>
+                                                <td>5d 21h</td>
+                                                <td><span class="server_lamp" id="serverLamp4"></span></td>
+                                                <td>
+                                                    <input type="checkbox" class="toggle" id="server_switch4">
+                                                    <label for="server_switch4"></label>
+                                                </td>
+                                                <td><span class="">Maximum</span></td>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="Maximum">Maximum</option>
+                                                        <option value="Normal">Normal</option>
+                                                    </select>
+                                                </td>
+                                                <td><a href="#" class="reset-btn">Application</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td class="device_id">Server_1_WAS1</td>
+                                                <td>112.169.110.141</td>
+                                                <td>5d 21h</td>
+                                                <td><span class="server_lamp" id="serverLamp5"></span></td>
+                                                <td>
+                                                    <input type="checkbox" class="toggle" id="server_switch5">
+                                                    <label for="server_switch5"></label>
+                                                </td>
+                                                <td><span class="">Maximum</span></td>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="Maximum">Maximum</option>
+                                                        <option value="Normal">Normal</option>
+                                                    </select>
+                                                </td>
+                                                <td><a href="#" class="reset-btn">Application</a></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </form>
+    <!-- //Contents -->
+
+    <!-- SERVER START Modal -->
+    <div class="modal-wrap" id="serverStart"">
+        <div class=" modal-container">
+        <div class="modal-header">
+            START
+        </div>
+        <div class="modal-explan">
+        </div>
+        <form>
+            <div class="modal-contents">
+                Massage Gateway 서버를 시작 하시겠습니까?<br>
+                서버를 시작하면 Messaging이 시작됩니다.
+            </div>
+            <div class="modal-btns">
+                <button type="button" class="save-btn">Start</button>
+                <a href="#" class="close-btn">Cancel</a>
+            </div>
+        </form>
+    </div>
+    </div>
+    <!-- //SERVER START Modal -->
+
+    <!-- SERVER STOP Modal -->
+    <div class="modal-wrap" id="serverStop"">
+        <div class=" modal-container">
+        <div class="modal-header">
+            START
+        </div>
+        <div class="modal-explan">
+        </div>
+        <form>
+            <div class="modal-contents">
+                Massage Gateway 서버를 끄시겠습니까?<br>
+                서버를 끄시면 모든 Messaging이 중단됩니다.
+            </div>
+            <div class="modal-btns">
+                <button type="button" class="stop-btn">Stop</button>
+                <a href="#" class="close-btn">Cancel</a>
+            </div>
+        </form>
+    </div>
+    </div>
+    <!-- //SERVER STOP Modal -->
+
+
+
+
+    <!-- Footer -->
+    <div class="admin__wrap admin__wrap--footer">
+        <footer class="admin__footer">
+            <div class="connection-wrap">
+                <em class="fl">CONNECTION</em>
+                <span class="connection-info fl"></span>
+            </div>
+        </footer>
+    </div>
+    <!-- //Footer -->
+
+    <script src="../rsc/js/core.js"></script>
+
+</body>
+
+</html>
