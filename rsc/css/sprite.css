@@ -18,6 +18,18 @@
 	width: 23px;
 	height: 23px;
 }
+.ico-server {
+	background: url('../img/sprite.png');	
+	background-position: -66px -65px;
+	width: 23px;
+	height: 23px;
+}
+.ico-webui {
+	background: url('../img/sprite.png');	
+	background-position: -97px -65px;
+	width: 23px;
+	height: 23px;
+}
 
 .ico-home-bk {
 	background: url('../img/sprite.png');	

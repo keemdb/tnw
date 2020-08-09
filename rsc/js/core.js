@@ -28,6 +28,12 @@ $('#pubModalBtn').click(function (e) {
 $('#subModalBtn').click(function (e) {
     $('#subModal').css('display', 'block');
 });
+$('#regiModalBtn').click(function (e) {
+    $('#regiModal').css('display', 'block');
+});
+$('.reset-btn').click(function (e) {
+    $('#pwresetModal').css('display', 'block');
+});
 $('.close-btn').click(function () {
     $('.modal-wrap').css('display', 'none');
 });
