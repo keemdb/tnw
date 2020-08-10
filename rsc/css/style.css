@@ -920,7 +920,8 @@
 .admin__pub-policies .admin__update-info,
 .admin__sub-policies .admin__update-info,
 .admin__userid-management .admin__update-info,
-.admin__server-control .admin__update-info {
+.admin__server-control .admin__update-info,
+.admin__users-management .admin__update-info {
     color: #333;
     padding: 0px 124px 0 0;
 }
@@ -934,7 +935,8 @@
 .admin__pub-policies .admin__update-info .pause-btn,
 .admin__sub-policies .admin__update-info .pause-btn,
 .admin__userid-management .admin__update-info .pause-btn,
-.admin__server-control .admin__update-info .pause-btn {
+.admin__server-control .admin__update-info .pause-btn,
+.admin__users-management .admin__update-info .pause-btn {
     position: absolute;
     display: block;
     top: -6px;
@@ -968,7 +970,8 @@
 .admin__conn-policies .admin__search-wrap,
 .admin__pub-policies .admin__search-wrap,
 .admin__sub-policies .admin__search-wrap,
-.admin__userid-management .admin__search-wrap {
+.admin__userid-management .admin__search-wrap,
+.admin__users-management .admin__search-wrap {
     text-align: left;
 }
 
@@ -1172,6 +1175,10 @@
     outline: 0;
 }
 
+/* USERS MANAGEMENT */
+.admin__users-management .admin__table-wrap {
+    height: 668px;
+}
 
 
 
@@ -1350,7 +1357,8 @@
     vertical-align: top;
 }
 .modal-contents .add-userregi input[type="text"],
-.modal-contents .add-userregi input[type="password"] {
+.modal-contents .add-userregi input[type="password"],
+.modal-contents .add-userregi select {
     width: 286px;
     margin-bottom: 0;
     margin-left: 30px;
