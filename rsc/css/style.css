@@ -163,7 +163,7 @@
     transition: .3s;
 }
 
-.admin__header .btn_nav.toggle {
+.admin__header .btn_nav.act {
     background: #00adee;
 }
 
@@ -199,15 +199,15 @@
     transition: .3s;
 }
 
-.admin__header .btn_nav.toggle span {
+.admin__header .btn_nav.act span {
     background: transparent;
 }
 
-.admin__header .btn_nav.toggle span:before {
+.admin__header .btn_nav.act span:before {
     top: 0;
     transform: rotate(45deg);
 }
-.admin__header .btn_nav.toggle span:after {
+.admin__header .btn_nav.act span:after {
     top: 0;
     transform: rotate(-45deg);
 }
@@ -521,7 +521,6 @@
     position: absolute;
     top: 6px;
     right: 244px;
-    font-size: 16px;
     font-weight: 400;
     color: #282828;
 }
@@ -568,6 +567,7 @@
     background-position: -109px -139px;
     width: 195px;
     height: 30px;
+    text-align: center;
 }
 
 .admin__section-comment .pause-btn:hover{
@@ -933,7 +933,6 @@
     top: -6px;
     right: 0;
     color: #fff;
-    font-weight: 500;
     padding: 0px 10px;
     border-radius: 2px;
     box-sizing: border-box;
@@ -1435,6 +1434,7 @@
 
 /* Footer */
 .admin__wrap--footer {
+    display: none;
     position: fixed;
     bottom: 0;
     background: #edf0f5;

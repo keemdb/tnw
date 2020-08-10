@@ -7,10 +7,10 @@ $('.admin__snb > li~li > a').click(function () {
 $('.btn_nav').click(function () {
     $('.admin__snb-wrap').toggleClass('active');
     $('.admin__snb-background').toggleClass('active');
-    $('.btn_nav').toggleClass('toggle');
+    $('.btn_nav').toggleClass('act');
 });
 $('.admin__snb-background').click(function () {
-    $('.btn_nav').toggleClass('toggle');
+    $('.btn_nav').toggleClass('act');
     $('.admin__snb-wrap').toggleClass('active');
     $(this).removeClass('active');
 })
