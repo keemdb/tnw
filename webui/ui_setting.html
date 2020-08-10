@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TNW Management Instrumentation</title>
+    <link rel="stylesheet" href="../rsc/css/style.css">
+    <script src="../rsc/js/jquery.min.js"></script>
+</head>
+
+<body class="main">
+    <!-- Header -->
+    <div class="admin__warp admin__warp--header">
+        <header class="admin__header">
+            <button class="btn_nav">
+                <span></span>
+            </button>
+
+            <h1 class="admin__logo"><a href="#"><img src="../rsc/img/logo.png" alt="TNW ManagementInstrumentation">TNW
+                    ManagementInstrumentation</a>
+            </h1>
+            <ul class="admin__gnb-list">
+                <li class="admin__gnb-item"><span class="ico-webui"></span><a href="#">Web UI Management</a></li>
+                <li class="admin__gnb-item"><a href="#">Web UI Setting</a></li>
+            </ul>
+            <div class="admin__update-info">
+                <div class="admin__update-detail">
+                    <span>LAST UPDATE</span>
+                    <em class="admin__update-date">2020.07.24 17:30:45</em>
+                    <em class="admin__update-time">17:30:45</em>
+                </div>
+                <a href="#" class="refresh-btn ico-refresh">Logout</a>
+            </div>
+        </header>
+    </div>
+    <!-- //Header -->
+
+    <!-- Side Navigation -->
+    <div class="admin__snb-wrap">
+        <div class="admin__login-info">
+            <div class="admin__login-user fl">
+                <img src="../rsc/img/user_01.jpg" alt="">
+            </div>
+            <div class="admin__login-detail fl">
+                <span>Hi</span>
+                <div><span class="admin__login-name">관리자(admin)</span>님</div>
+                <a href="#" class="setting-btn">Setting</a>
+                <a href="#" class="logout-btn">Log-out</a>
+            </div>
+        </div>
+        <ul class="admin__snb">
+            <li><a href="../main.html"><span class="ico-home-bk"></span>HOME</a></li>
+            <li><a href="#"><span class="ico-monitoring-bk"></span>Monitoring</a>
+                <ul>
+                    <li><a href="../monitoring/connection.html">Connection Monitor</a></li>
+                    <li><a href="../monitoring/disconnected.html">Disconnected Device ID Monitor</a></li>
+                    <li><a href="../monitoring/publish.html">Publish Monitor</a></li>
+                    <li><a href="../monitoring/subscription.html">Subscription Monitor</a></li>
+                    <li><a href="../monitoring/server.html">Server Monitor</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="ico-messaging-bk"></span>Messaging</a>
+                <ul>
+                    <li><a href="../messaging/tnw_server.html">TNW Server</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="ico-server-bk"></span>Server</a>
+                <ul>
+                    <li><a href="../server/user_management.html">User ID Management</a></li>
+                    <li><a href="../server/server_control.html">Server Control</a></li>
+                </ul>
+            </li>
+            <li class="active on"><a href="#"><span class="ico-webui-bk"></span>Web UI Management</a>
+                <ul>
+                    <li><a href="#">Web UI Users</a></li>
+                    <li><a href="#" class="active">Web UI Settings</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="admin__snb-background"></div>
+    <!-- //Side Navigation -->
+
+    <!-- Contents -->
+    <form>
+        <div class="admin__wrap admin__wrap--contents">
+            <article class="admin__contents">
+                <h1 class="hide">Dashboard</h1>
+                <div class="admin__section-wrap">
+                    <div class="admin__section-wrap">
+                        <section class="admin__section admin__ui-setting">
+                            <h1 class="admin__section-title">
+                                WEB UI SETTINGS
+                            </h1>
+                            <div class="admin__section-comment">
+                                <span>Web UI에 대한 설정을 구성</span>
+                            </div>
+                            <div class="publish-wrap">
+                                <div class="admin__section-subcomment">
+                                    <em>Publish Policies |</em>
+                                    <span>웹 UI 통신을 위한 IP 주소 및 포트를 선택해라. 두 값 중 하나를 변경하면 새 IP 주소와 포트에 로그인해야 한다.</span>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <span>IP Address</span>
+                                        <input type="text" value="112.169.110.141">
+                                    </li>
+                                    <li>
+                                        <span>Port</span>
+                                        <input type="text" value="21">
+                                        <span>* 유효한 포트는 1 ~ 8999, 9087 또는 9100 ~ 65535이다.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="session-wrap">
+                                <div class="admin__section-subcomment">
+                                    <em>Session Timeout and Refresh Time |</em>
+                                    <span>브라우저와 서버 간의 활동을 기반으로 사용자 로그인 세션을 제어 및 그래프 리플래쉬 시간을 설정 한다.</span>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <span>Session Timeout</span>
+                                        <input type="text" value="5">miniutes
+                                    </li>
+                                    <li>
+                                        <span>Refresh Time</span>
+                                        <input type="text" value="10">seconds
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="httpread-wrap">
+                                <div class="admin__section-subcomment">
+                                    <em>HTTP Read Timeout |</em>
+                                    <span>첫 번째 읽기가 발생한 후 소켓에서 읽기 요청이 완료 될 때까지 기다리는 최대 시간이다.</span>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <span>Session Timeout</span>
+                                        <input type="text" value="5">miniutes
+                                        <span>* 1 ~ 300초(5분) 사이의 값이다.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="service-wrap">
+                                <div class="admin__section-subcomment">
+                                    <em>Service |</em>
+                                    <span>웹 UI에 대한 지원 정보를 생성하도록 추적 레벨을 설정</span>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="traceChk">
+                                        <label for="traceChk"></label>Enable trace
+                                    </li>
+                                    <li>
+                                        <span>Trace Specification</span>
+                                        <input type="text" value="5">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div><button class="save-btn">Save</button></div>
+                        </section>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </form>
+    <!-- //Contents -->
+
+    <!-- USER REGISTARATION Modal -->
+    <div class="modal-wrap" id="regiModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                WEB UI USER REGISTARATION
+            </div>
+            <div class="modal-explan">
+            </div>
+            <form>
+                <div class="modal-contents">
+                    <div class="add-userregi">
+                        <ul>
+                            <li>
+                                <span class="set-title">User ID</span>
+                                <input type="text" placeholder="ID">
+                            </li>
+                            <li>
+                                <span class="set-title">Password</span>
+                                <input type="Password" placeholder="Password">
+                            </li>
+                            <li>
+                                <span class="set-title">Confirm Password</span>
+                                <input type="Password" placeholder="Password">
+                            </li>
+                            <li>
+                                <span class="set-title">Role</span>
+                                <select name="" id="">
+                                    <option value="Users">Users</option>
+                                    <option value="1">1</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span class="set-title">Active</span>
+                                <input type="checkbox" id="actChk">
+                                <label for="actChk"></label>
+                                Active
+                                <input type="checkbox" id="incChk">
+                                <label for="incChk"></label>
+                                Inacive
+                            </li>
+                            <li>
+                                <span class="set-title desc">Description</span>
+                                <textarea name="Description" id="" cols="30" rows="10"></textarea>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-btns">
+                    <button type="button" class="save-btn">Save</button>
+                    <a href="#" class="close-btn">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- //USER REGISTARATION Modal -->
+
+    <!-- PASSWORD RESET Modal -->
+    <div class="modal-wrap" id="pwresetModal">
+        <div class=" modal-container">
+            <div class="modal-header">
+                PASSWORD RESET
+            </div>
+            <div class="modal-explan">
+            </div>
+            <form>
+                <div class="modal-contents">
+                    <div class="add-userregi">
+                        <ul>
+                            <li>
+                                <span class="set-title">Web User ID</span>
+                                <span id="webUserId">Test 3</span>
+                            </li>
+                            <li>
+                                <span class="set-title">Password</span>
+                                <input type="Password" placeholder="Password">
+                            </li>
+                            <li>
+                                <span class="set-title">Confirm Password</span>
+                                <input type="Password" placeholder="Password">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-btns">
+                    <button type="button" class="save-btn">Save</button>
+                    <a href="#" class="close-btn">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- //PASSWORD RESET Modal -->
+
+
+    <!-- Footer -->
+    <div class="admin__wrap admin__wrap--footer">
+        <footer class="admin__footer">
+            <div class="connection-wrap">
+                <em class="fl">CONNECTION</em>
+                <span class="connection-info fl"></span>
+            </div>
+        </footer>
+    </div>
+    <!-- //Footer -->
+
+    <script src="../rsc/js/core.js"></script>
+
+</body>
+
+</html>
