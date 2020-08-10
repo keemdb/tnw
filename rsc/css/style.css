@@ -689,33 +689,33 @@
 }
 
 .admin__quick-stats .admin__table-wrap {
-    height: 240px;
+    height: 246px;
 }
 
 .admin__quick-chart {
-    height: 280px;
+    height: 250px;
     overflow-y: auto;
 }
 
 .admin__alarm {
-    height: 289px;
+    height: 249px;
 }
 
 .admin__alarm .admin__table-wrap {
-    height: 200px;
+    height: 171px;
 }
 
 .admin__conn-policies .admin__table-wrap {
-    height: 145px;
+    height: 125px;
 }
 .admin__pub-policies .admin__table-wrap {
-    height: 145px;
+    height: 125px;
 }
 .admin__sub-policies .admin__table-wrap {
-    height: 145px;
+    height: 125px;
 }
 .admin__server-control .admin__table-wrap {
-    height: 800px;
+    height: 768px;
 }
 
 
@@ -743,7 +743,7 @@
 }
 
 .admin__list-of-server .admin__table-wrap {
-    max-height: 837px;
+    max-height: 775px;
 }
 
 .admin__list-of-server .admin__table tbody tr:hover {
@@ -758,6 +758,13 @@
     padding: 10px 0;
     border: 1px solid #eaeaea;
 }
+
+.admin__conn-policies .admin__table td,
+.admin__pub-policies .admin__table td,
+.admin__sub-policies .admin__table td {
+    padding: 5px 0;
+}
+
 
 .admin__table td.server_name,
 .admin__table td.device_id {
@@ -868,28 +875,28 @@
 
 .admin__list-of-server {
     width: 470px;
-    max-height: 930px;
+    max-height: 832px;
 }
 
 .admin__connection {
-    height: 390px;
+    height: 350px;
     overflow: auto;
 }
 
 .admin__connection-data .admin__table-wrap {
-    height: 307px;
+    height: 282px;
 }
 
 .admin__disconnected .admin__table-wrap {
-    height: 733px;
+    height: 669px;
 }
 
 .admin__publish .admin__table-wrap {
-    height: 733px;
+    height: 669px;
 }
 
 .admin__subscription .admin__table-wrap {
-    height: 699px;
+    height: 635px;
 }
 
 .admin__disconnected,
@@ -1114,7 +1121,7 @@
 
 .admin__server-chart-wrap div {
     font-weight: 600;
-    height: 216px;
+    height: 203px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     padding: 10px 15px;
@@ -1152,7 +1159,7 @@
 
 /* User ID Management */
 .admin__userid-management .admin__table-wrap {
-    height: 740px;
+    height: 668px;
 }
 
 /* SERVER CONTROL */
