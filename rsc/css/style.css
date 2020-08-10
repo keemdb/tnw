@@ -693,7 +693,7 @@
 }
 
 .admin__quick-chart {
-    height: 310px;
+    height: 280px;
     overflow-y: auto;
 }
 
@@ -706,13 +706,13 @@
 }
 
 .admin__conn-policies .admin__table-wrap {
-    height: 155px;
+    height: 145px;
 }
 .admin__pub-policies .admin__table-wrap {
-    height: 155px;
+    height: 145px;
 }
 .admin__sub-policies .admin__table-wrap {
-    height: 155px;
+    height: 145px;
 }
 .admin__server-control .admin__table-wrap {
     height: 800px;
@@ -743,7 +743,7 @@
 }
 
 .admin__list-of-server .admin__table-wrap {
-    max-height: 872px;
+    max-height: 837px;
 }
 
 .admin__list-of-server .admin__table tbody tr:hover {
@@ -877,19 +877,19 @@
 }
 
 .admin__connection-data .admin__table-wrap {
-    height: 324px;
+    height: 307px;
 }
 
 .admin__disconnected .admin__table-wrap {
-    height: 750px;
+    height: 733px;
 }
 
 .admin__publish .admin__table-wrap {
-    height: 750px;
+    height: 733px;
 }
 
 .admin__subscription .admin__table-wrap {
-    height: 710px;
+    height: 699px;
 }
 
 .admin__disconnected,
