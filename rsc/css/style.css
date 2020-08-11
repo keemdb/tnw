@@ -40,16 +40,21 @@
 }
 
 .login_wrap ul li {
-    padding: 25px 0;
+    padding: 10px 0;
+    font-size: 16px;
 }
 
 .login_wrap ul li:first-child {
     font-size: 18px;
+    margin-bottom: 20px;
+}
+.login_wrap ul li:nth-child(3) {
+    margin-bottom: 30px;
 }
 
 .login_wrap ul li input {
     width: 100%;
-    height: 52px;
+    height: 32px;
     border: 0;
     outline: none;
     border-bottom: 1px solid #c9ccdd;
@@ -58,7 +63,7 @@
 }
 
 .login_wrap ul li input::-webkit-input-placeholder {
-    font-size: 10px;
+    font-size: 16px;
     color: #c9ccdd;
 }
 
