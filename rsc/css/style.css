@@ -580,7 +580,7 @@
 }
 
 .admin__section-subcomment {
-    margin: 12px 0;
+    margin: 10.5px 0;
 }
 
 .admin__section-subcomment em {
@@ -686,6 +686,7 @@
 
 .admin__table-wrap {
     overflow: auto;
+    height: 773px;
 }
 
 .admin__quick-stats {
@@ -768,6 +769,12 @@
 .admin__pub-policies .admin__table td,
 .admin__sub-policies .admin__table td {
     padding: 5px 0;
+}
+
+.admin__userid-management .admin__table td,
+.admin__server-control .admin__table td,
+.admin__users-management .admin__table td {
+    padding: 6px 0;
 }
 
 
@@ -1098,9 +1105,12 @@
 }
 
 .admin__server-monitor-wrap {
-    margin: 0 30px 0 0;
+    margin: 0;
 }
 
+.admin__server-checklist {
+    width: 470px;
+}
 .admin__server-checklist .admin__table .server_color {
     display: inline-block;
     width: 120px;
