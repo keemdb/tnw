@@ -97,7 +97,7 @@
                             <div class="admin__section-comment">
                                 <span>Web UI에 대한 설정을 구성</span>
                             </div>
-                            <div class="publish-wrap">
+                            <div class="setting-wrap">
                                 <div class="admin__section-subcomment">
                                     <em>Publish Policies |</em>
                                     <span>웹 UI 통신을 위한 IP 주소 및 포트를 선택해라. 두 값 중 하나를 변경하면 새 IP 주소와 포트에 로그인해야 한다.</span>
@@ -110,11 +110,11 @@
                                     <li>
                                         <span>Port</span>
                                         <input type="text" value="21">
-                                        <span>* 유효한 포트는 1 ~ 8999, 9087 또는 9100 ~ 65535이다.</span>
+                                        <span class="setting_comment">* 유효한 포트는 1 ~ 8999, 9087 또는 9100 ~ 65535이다.</span>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="session-wrap">
+                            <div class="setting-wrap">
                                 <div class="admin__section-subcomment">
                                     <em>Session Timeout and Refresh Time |</em>
                                     <span>브라우저와 서버 간의 활동을 기반으로 사용자 로그인 세션을 제어 및 그래프 리플래쉬 시간을 설정 한다.</span>
@@ -122,15 +122,15 @@
                                 <ul>
                                     <li>
                                         <span>Session Timeout</span>
-                                        <input type="text" value="5">miniutes
+                                        <input type="text" value="5" class="small">miniutes
                                     </li>
                                     <li>
                                         <span>Refresh Time</span>
-                                        <input type="text" value="10">seconds
+                                        <input type="text" value="10" class="small">seconds
                                     </li>
                                 </ul>
                             </div>
-                            <div class="httpread-wrap">
+                            <div class="setting-wrap">
                                 <div class="admin__section-subcomment">
                                     <em>HTTP Read Timeout |</em>
                                     <span>첫 번째 읽기가 발생한 후 소켓에서 읽기 요청이 완료 될 때까지 기다리는 최대 시간이다.</span>
@@ -138,12 +138,12 @@
                                 <ul>
                                     <li>
                                         <span>Session Timeout</span>
-                                        <input type="text" value="5">miniutes
-                                        <span>* 1 ~ 300초(5분) 사이의 값이다.</span>
+                                        <input type="text" value="5" class="small">miniutes
+                                        <span class="setting_comment">* 1 ~ 300초(5분) 사이의 값이다.</span>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="service-wrap">
+                            <div class="setting-wrap">
                                 <div class="admin__section-subcomment">
                                     <em>Service |</em>
                                     <span>웹 UI에 대한 지원 정보를 생성하도록 추적 레벨을 설정</span>
@@ -159,7 +159,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div><button class="save-btn">Save</button></div>
+                            <div class="setting-footer"><button class="save-btn">Save</button></div>
                         </section>
                     </div>
                 </div>

@@ -1180,6 +1180,72 @@
     height: 668px;
 }
 
+/* Web UI SETTING */
+
+.admin__ui-setting .setting-wrap {
+    padding: 10px 0 30px;
+    border-bottom: 1px solid #d9dfe9;
+}
+
+.admin__ui-setting .setting-wrap ul li {
+    margin-bottom: 10px;
+}
+
+
+.admin__ui-setting .setting-wrap ul li span {
+    display: inline-block;
+    width: 240px;
+    height: 28px;
+    line-height: 28px;
+    background-color: #ebebeb;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 500;
+}
+.admin__ui-setting .setting-wrap ul li span.setting_comment {
+    position: absolute;
+    display: block;
+    width: 360px;
+    background-color: transparent;
+    text-align: left;
+    font-size: 12px;
+    left: 320px;
+}
+.admin__ui-setting .setting-wrap ul li input[type="text"] {
+    width: 355px;
+    height: 28px;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    box-sizing: border-box;
+    text-indent: 20px;
+    margin: 0 10px;
+}
+.admin__ui-setting .setting-wrap ul li input[type="text"].small {
+    width: 280px;
+}
+
+.admin__ui-setting .setting-wrap ul li input[type="checkbox"] {
+    position: relative;
+    display: none;
+}
+.admin__ui-setting .setting-wrap ul li input[type="checkbox"] + label:before {
+    content: "";
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background: #fff;
+    margin: 0 5px 0 0px;
+    vertical-align: -6px;
+    background: url('../img/sprite.png');	
+    background-position: -400px -80px;
+}
+.admin__ui-setting .setting-wrap ul li input[type="checkbox"]:checked + label:before {
+    background-position: -430px -80px;
+}
+.admin__ui-setting .setting-footer {
+    margin-top: 30px;
+    text-align: center;
+}
 
 
 
