@@ -132,6 +132,77 @@
 }
 
 
+
+
+
+/* Error Page */
+.error {
+    background: url('../img/bg_error.jpg');
+    height: 100vh;
+}
+
+.error_wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 430px;
+    transform: translate(-50%, -50%);
+}
+
+.error_wrap div {
+    text-align: center;
+}
+
+.error_container .error_img {
+    background: url(../img/error.png);
+    width: 312px;
+    height: 297px;
+    margin-bottom: 34px;
+}
+.error_container .error_img500 {
+    background: url(../img/error_500.png);
+    width: 225px;
+    height: 229px;
+    margin: 0 0 34px 66px;
+}
+
+.error_container .error_img span {
+    display: inline-block;
+    font-size: 64px;
+    color: #5e5e5e;
+    font-weight: bold;
+    line-height: 387px;
+    padding-left: 36px;
+}
+.error_container .error_tit {
+    font-size: 40px;
+    color: #195fe6;
+    font-weight: bold;
+    margin: 0 77px 15px 0;
+}
+.error_container .error_cont {
+    font-size: 30px;
+    color: #282828;
+    font-weight: 500;
+    margin: 0 77px 0px 0;
+}
+
+
+.error_wrap div a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    width: 187px;
+    height: 51px;
+    line-height: 51px;
+    margin: 30px 82px 0 0;
+}
+
+.error_wrap div a:hover {
+    background-position: -197px -269px;
+}
+
 /* Header */
 .admin__wrap {width: 100%;}
 .admin__wrap--contents {background: #edf0f5;}
@@ -1642,6 +1713,9 @@
 }
 .server_lamp.on {
     background-color: #22d100;
+}
+.back-btn {
+
 }
 
 

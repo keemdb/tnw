@@ -89,3 +89,9 @@
 	width: 7px;
 	height: 11px;
 }
+.ico-error {
+	background: url('../img/sprite.png');	
+	background-position: 0 -269px;
+	width: 187px;
+	height: 51px;
+}
