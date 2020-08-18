@@ -73,22 +73,25 @@
 }
 
 .login_wrap ul li input[type="checkbox"] + label {
+    position: relative;
     height: 21px;
+    padding-left: 30px;
 }
 
 .login_wrap ul li input[type="checkbox"] + label::before {
-    content: "";
-    display: inline-block;
-    width: 21px;
-    height: 21px;
-    border: 2px solid #b6b7b9;
-    background: #fff;
-    margin: 0 17px 0 0;
-    vertical-align: -6px;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+	width: 20px;
+	height: 20px;
+	background: url('../img/sprite.png');	
+    background-position: -400px -80px;
 }
 
 .login_wrap ul li input[type="checkbox"]:checked + label::before {
-    background: #b6b7b9;
+    background-position: -430px -80px;
 }
 
 .login_wrap ul li button {
@@ -100,6 +103,7 @@
     outline: none;
     color: #fff;
     font-size: 13px;
+    cursor: pointer;
 }
 
 .login_wrap div {
