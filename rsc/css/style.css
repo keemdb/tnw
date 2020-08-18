@@ -1568,11 +1568,11 @@
 .modal-contents .add-client ul li input[type="checkbox"]:checked + label:before {
     background-position: -430px -80px;
 }
-.modal-contents .add-userregi ul li input[type="checkbox"] {
+.modal-contents .add-userregi ul li input[type="radio"] {
     position: relative;
     display: none;
 }
-.modal-contents .add-userregi ul li input[type="checkbox"] + label:before {
+.modal-contents .add-userregi ul li input[type="radio"] + label:before {
     content: "";
     display: inline-block;
     width: 21px;
@@ -1583,7 +1583,7 @@
     background: url('../img/sprite.png');	
     background-position: -400px -80px;
 }
-.modal-contents .add-userregi ul li input[type="checkbox"]:checked + label:before {
+.modal-contents .add-userregi ul li input[type="radio"]:checked + label:before {
     background-position: -430px -80px;
 }
 
