@@ -764,6 +764,28 @@
     height: 773px;
 }
 
+.admin__table-wrap thead th .sortable {
+    cursor: pointer;
+    padding: 12px 0 10px;
+}
+
+.admin__table-wrap thead th .both {
+    background: url(../img/ico-sort.png);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.admin__table-wrap thead th .asc {
+    background: url(../img/ico-asc.png);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.admin__table-wrap thead th .desc {
+    background: url(../img/ico-desc.png);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+
 .admin__quick-stats {
     margin-left: 30px;
     width: calc(100% - 381px);
@@ -810,7 +832,6 @@
     position: relative;
     text-align: center;
     vertical-align: middle;
-    padding: 12px 0 10px;
     font-weight: 500;
     border: 1px solid #cbcbcb;
     border-left: 1px solid #eaeaea;
@@ -1104,8 +1125,17 @@
     cursor: pointer;
 }
 
-.admin__search-wrap .search-btn:hover {
+.admin__search-wrap .search-btn:hover,
+.admin__search-wrap .field-btn:hover {
     color: #fff;
+}
+
+.admin__search-wrap .field-btn {
+    background: url(../img/sprite.png) no-repeat;
+    background-position: 0 -99px;
+    cursor: pointer;
+    position: absolute;
+    right: 34px;
 }
 
 .admin__search-wrap .delete-btn {
@@ -1128,6 +1158,72 @@
 .admin__search-wrap .add-btn:hover {
     background-position: 0 -99px;
 }
+
+
+/* Field Popup */
+
+.admin__search-wrap .field_popup {
+    display: none;
+    position: absolute;
+    top: 132px;
+    right: 32px;
+    background: #fff;
+    border: 1px solid #666;
+    z-index: 1;
+    padding: 10px;
+}
+
+.admin__search-wrap .field_popup ul li {
+    padding: 2px 0;
+}
+
+.admin__search-wrap .field_popup ul li:first-child {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 3px;
+    margin-bottom: 2px;
+}
+.admin__search-wrap .field_popup ul li:last-child {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+}
+
+.admin__search-wrap .field_popup input[type="checkbox"] {
+    position: relative;
+    display: none;
+    width: 20px;
+}
+.admin__search-wrap .field_popup input[type="checkbox"] + label:before {
+    content: "";
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background: #fff;
+    margin: 0 5px 0 0px;
+    vertical-align: -6px;
+    background: url('../img/sprite.png');	
+    background-position: -400px -80px;    
+}
+.admin__search-wrap .field_popup input[type="checkbox"]:checked + label:before {
+    background-position: -430px -80px;
+}
+
+.admin__search-wrap .field_popup_footer {
+    text-align: right;
+}
+
+.admin__search-wrap .done-btn {
+    background: url(../img/sprite.png) no-repeat;
+    background-position: 0 -99px;
+    cursor: pointer;
+}
+.admin__search-wrap .done-btn:hover {
+    color: #fff;
+}
+
+
+/* Table Paging */
+
 
 .admin__table-paging-wrap {
     position: relative;

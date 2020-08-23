@@ -57,3 +57,38 @@ $('#server_switch1').click(function () {
 $('#logLevel').change(function () {
     $('.server_state').html($(this).val());
 });
+
+// Sortable Event
+$('.admin__table-wrap thead th .sortable').click(function (e) {
+    if ($(this).hasClass('both') === true) {
+        $(this).removeClass('both');
+        $(this).addClass('asc');
+    } else if ($(this).hasClass('asc') === true) {
+        $(this).removeClass('asc');
+        $(this).addClass('desc');
+    } else {
+        $(this).removeClass('desc');
+        $(this).addClass('both');
+    }
+})
+
+$('#fieldChk1').click(function () {
+    var chk = $(this).is(":checked");
+    if (chk) {
+        $(this).parent().parent().parent().parent().parent().find('thead tr th:first-child').show();
+        $(this).parent().parent().parent().parent().parent().find('tbody tr td:first-child').show();
+    } else {
+        $(this).parent().parent().parent().parent().parent().find('thead tr th:first-child').hide();
+        $(this).parent().parent().parent().parent().parent().find('tbody tr td:first-child').hide();
+    }
+
+});
+
+
+// Field Popup
+$('.field-btn').click(function (e) {
+    $('.field_popup').css('display', 'block');
+});
+$('.done-btn').click(function (e) {
+    $('.field_popup').css('display', 'none');
+});

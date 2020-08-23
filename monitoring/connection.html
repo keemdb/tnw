@@ -103,9 +103,15 @@
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th scope="col">NO</th>
-                                            <th scope="col">Server Name</th>
-                                            <th scope="col">IP Address</th>
+                                            <th scope="col">
+                                                <div class="th-inner sortable">NO</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="th-inner sortable both">Server Name</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="th-inner sortable both">IP Address</div>
+                                            </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -291,6 +297,54 @@
                                     </select>
                                     <input type="text" placeholder="필터">
                                     <button type="button" class="search-btn">검색</button>
+                                    <button type="button" class="field-btn">필드</button>
+                                    <div class="field_popup">
+                                        <ul>
+                                            <li>
+                                                <input type="checkbox" id="fieldChkAll">
+                                                <label for="fieldChkAll"></label>
+                                                <span>전체</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="fieldChk1" checked>
+                                                <label for="fieldChk1"></label>
+                                                <span>Device ID</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="fieldChk2" checked>
+                                                <label for="fieldChk2"></label>
+                                                <span>Client IP</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="fieldChk3" checked>
+                                                <label for="fieldChk3"></label>
+                                                <span>User ID</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="fieldChk4" checked>
+                                                <label for="fieldChk4"></label>
+                                                <span>처리량 (Messages/Sec)</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="fieldChk5" checked>
+                                                <label for="fieldChk5"></label>
+                                                <span>발신 수 (Messages)</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="fieldChk6" checked>
+                                                <label for="fieldChk6"></label>
+                                                <span>수신 수 (Messages)</span>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="fieldChk7" checked>
+                                                <label for="fieldChk7"></label>
+                                                <span>연결시간 (Sec)</span>
+                                            </li>
+                                        </ul>
+                                        <div class="field_popup_footer">
+                                            <button type="button" class="done-btn">닫기</button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="admin__table-wrap">
                                     <table cellpadding="0" cellspacint="0" class="admin__table">
@@ -305,13 +359,27 @@
                                         </colgroup>
                                         <thead>
                                             <tr>
-                                                <th scope="col">Device ID</th>
-                                                <th scope="col">Client IP</th>
-                                                <th scope="col">User ID</th>
-                                                <th scope="col">처리량 (Messages/Sec)</th>
-                                                <th scope="col">발신 수 (Messages)</th>
-                                                <th scope="col">수신 수 (Messages)</th>
-                                                <th scope="col">연결시간 (Sec)</th>
+                                                <th scope="col">
+                                                    <div class="th-inner sortable both">Device ID</div>
+                                                </th>
+                                                <th scope="col">
+                                                    <div class="th-inner sortable both">Client IP</div>
+                                                </th>
+                                                <th scope="col">
+                                                    <div class="th-inner sortable both">User ID</div>
+                                                </th>
+                                                <th scope="col">
+                                                    <div class="th-inner sortable both">처리량 (Messages/Sec)</div>
+                                                </th>
+                                                <th scope="col">
+                                                    <div class="th-inner sortable both">발신 수 (Messages)</div>
+                                                </th>
+                                                <th scope="col">
+                                                    <div class="th-inner sortable both">수신 수 (Messages)</div>
+                                                </th>
+                                                <th scope="col">
+                                                    <div class="th-inner sortable both">연결시간 (Sec)</div>
+                                                </th>
                                             </tr>
                                         </thead>
                                         <tbody>
